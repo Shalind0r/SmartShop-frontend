@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import classes from './Number.module.css';
 interface propsTypes {
 	link: string;
@@ -18,7 +18,7 @@ const Number: React.FC<propsTypes> = ({
 				className={`${classes.link} typography--h4`}
 				href={link}
 				target="_blank"
-				rel="noreferrer"
+				rel="noreferrer nofollow"
 			>
 				{content}
 			</a>

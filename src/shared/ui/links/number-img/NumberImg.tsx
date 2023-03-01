@@ -22,15 +22,15 @@ const NumberImg: React.FC<types> = ({
 				className={`${classes.text} typography--h4`}
 				href={mainLink}
 				target="_blank"
-				rel="noreferrer"
+				rel="nofollow noreferrer"
 			>
 				{text}
 			</a>
 			<span>
-				<a href={firstLink} target="_blank" rel="noreferrer">
+				<a href={firstLink} target="_blank" rel="nofollow noreferrer">
 					<TelegramLogo className={classes.telegramIcon} />
 				</a>
-				<a href={secondLink} target="_blank" rel="noreferrer">
+				<a href={secondLink} target="_blank" rel="nofollow noreferrer">
 					<ViberLogo className={classes.viberIcon} />
 				</a>
 			</span>
