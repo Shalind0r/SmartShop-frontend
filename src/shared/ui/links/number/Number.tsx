@@ -18,7 +18,7 @@ const Number: React.FC<propsTypes> = ({
 				className={`${classes.link} typography--h4`}
 				href={link}
 				target="_blank"
-				rel="noreferrer nofollow"
+				rel="nofollow noreferrer"
 			>
 				{content}
 			</a>
