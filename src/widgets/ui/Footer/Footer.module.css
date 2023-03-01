@@ -1,0 +1,77 @@
+.footer {
+	background: var(--color-divider);
+	padding: 75px 0 60px 0;
+}
+.footer__container {
+	max-width: 1510px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px;
+	position: relative;
+}
+.footer__leftSide {
+	max-width: 410px;
+	flex-grow: 1;
+}
+.footer__leftTitle {
+	margin-bottom: 28px;
+}
+.label {
+	margin-bottom: 18px;
+}
+.footer__communication {
+	margin-bottom: 114px;
+}
+
+.numberLink:not(:hover) {
+	text-decoration: none;
+	color: var(--color-text-main-strong);
+	transition: 0.5s;
+}
+.footer__form {
+	margin-bottom: 95px;
+}
+.copyright__item {
+	font-size: 18px;
+	line-height: 6px;
+	margin-right: 2px;
+	vertical-align: bottom;
+}
+
+hr {
+	position: absolute;
+	height: 613px;
+	top: -75px;
+	left: 32.5%;
+	width: 1px;
+	background-color: white;
+	border: none;
+}
+.footer__rightSide {
+	max-width: 850px;
+	flex-grow: 1;
+}
+.footer__rightSideSub {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 114px;
+}
+.payments {
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+}
+.payments__system {
+	flex-grow: 1;
+	align-self: center;
+}
+.payments__item:not(:first-child) {
+	margin-left: 17px;
+}
+.payments__description {
+	flex-grow: 1.2;
+}
+.siteDeveloper > span {
+	margin-right: 16px;
+}

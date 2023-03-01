@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import './index.css'
+/// <reference types="vite-plugin-svgr/client" />
+import React from 'react';
+import './index.css';
+import 'shared/static/fonts/fonts.css';
+import Footer from 'widgets/ui/Footer/Footer';
 
-const App = () => {
+const App: React.FC = () => {
+	return (
+		<div className="App">
+			<Footer />
+		</div>
+	);
+};
 
-
-  return (
-    <div className="App">
-
-    </div>
-  )
-}
-
-export default App
+export default App;

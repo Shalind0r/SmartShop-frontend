@@ -1,0 +1,27 @@
+.footerNav {
+	display: flex;
+	justify-content: space-between;
+}
+.footerNav__title {
+	margin-bottom: 28px;
+}
+
+.footerNav__item > a:not(:hover) {
+	text-decoration: none;
+	color: var(--color-text-additional);
+	transition: 0.5s;
+}
+
+.catalog > .footerNav__item:last-child,
+.company > .footerNav__item:last-child {
+	margin-top: 30px;
+}
+.company > .footerNav__item:last-child > a {
+	display: flex;
+	align-items: center;
+}
+.company > .footerNav__item span {
+	margin-right: 10px;
+}
+.support {
+}

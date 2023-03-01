@@ -1,0 +1,152 @@
+:root {
+	/* Палитра цветов */
+	--color-text-main-strong: #000;
+	--color-text-main-weak: #fff;
+	--color-text-secondary: #7d7e80;
+	--color-text-additional: #959cad;
+	--color-text-link-hover: #3333f8;
+	--color-text-link-active: #000094;
+	--color-base-strong: #262728;
+	--color-base-weak: #fafbfc;
+	--color-accent-strong: #3da2ff;
+	--color-accent-weak: #dad3ff;
+	--color-complement-strong: #96139e;
+	--color-complement-weak: #e4c2e7;
+	--color-critic-strong: #c12a3c;
+	--color-critic-weak: #ffd3d7;
+	--color-warning-strong: #f7a715;
+	--color-warning-weak: #ffebb7;
+	--color-success-strong: #1abf70;
+	--color-success-weak: #d3ffea;
+	--color-rating-star: #ffc700;
+	--color-action-primary: #f1e846;
+	--color-action-hover-bg: #fff200;
+	--color-action-active-bg: #fcf574;
+	--color-form-border: #c7ccd4;
+	--color-divider: #ebf0f5;
+
+	/* Тени блоков */
+
+	--shadow-inset-1: inset 0 1px 2px 1px rgb(38 39 40 / 20%);
+	--shadow-1: 0 0 1px rgb(38 39 40 / 10%), 0 1px 2px rgb(38 39 40 / 10%);
+	--shadow-2: 0 3px 8px rgb(38 39 40 / 3%), 0 1.5px 3px rgb(38 39 40 / 4%),
+		0 0.5px 1px rgb(38 39 40 / 10%);
+	--shadow-3: 0 6px 16px rgb(38 39 40 / 4%), 0 3px 5px rgb(38 39 40 / 4%),
+		0 1.5px 2px rgb(38 39 40 / 3.08%), 0 0.5px 0.8px rgb(38 39 40 / 2.09%);
+	--shadow-4: 0 4px 16px rgb(38 39 40 / 6%), 0 3px 5px rgb(38 39 40 / 5%),
+		0 1.5px 3.5px rgb(38 39 40 / 5%), 0 0.8px 2px rgb(38 39 40 / 4%),
+		0 0.3px 1px rgb(38 39 40 / 3%);
+	--shadow-5: 0 8px 20px rgb(38 39 40 / 10%), 0 4px 9px rgb(38 39 40 / 8%),
+		0 2px 5px rgb(38 39 40 / 5.96%), 0 1px 3px rgb(38 39 40 / 5%),
+		0 0.5985px 1.5px rgb(38 39 40 / 4.04%), 0 0.249px 1px rgb(38 39 40 / 3%);
+	--shadow-6: 0 -1px 1px rgb(0 0 0 / 5%), 0 2px 2px rgb(0 0 0 / 5%),
+		0 4px 4px rgb(0 0 0 / 5%), 0 8px 8px rgb(0 0 0 / 5%),
+		0 16px 16px rgb(0 0 0 / 5%), 0 32px 32px rgb(0 0 0 / 5%);
+}
+
+/*Типография */
+
+.typography--h1 {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 48px;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+}
+
+.typography--h2 {
+	font-size: 24px;
+	line-height: 40px;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.typography--h3 {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 30px;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+}
+
+.typography--h4 {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+}
+
+.typography-decor {
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: 400;
+}
+
+.typography--base {
+	font-size: 15px;
+	line-height: 20px;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.typography--base-extended {
+	font-size: 15px;
+	line-height: 30px;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.typography--small {
+	font-size: 12px;
+	line-height: 16px;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.typography--large {
+	font-size: 20px;
+	line-height: 32px;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.typography--remark {
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 16px;
+	letter-spacing: 0.05em;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+}
+
+.typography--label {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.05em;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+}
+
+.typography--label-2 {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	text-transform: uppercase;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+}
+* {
+	margin: 0;
+}
+body {
+	color: var(--color-text-main-strong);
+}

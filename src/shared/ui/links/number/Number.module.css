@@ -1,0 +1,10 @@
+.link:not(:hover) {
+	text-decoration: none;
+	color: var(--color-text-main-strong);
+	transition: 0.5s;
+}
+.subText {
+	color: var(--color-text-additional);
+	margin-left: 10px;
+	vertical-align: text-top;
+}

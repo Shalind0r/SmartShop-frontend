@@ -1,0 +1,27 @@
+.text:not(:hover) {
+	text-decoration: none;
+	color: var(--color-text-main-strong);
+	transition: 0.5s;
+}
+
+.telegramIcon,
+.viberIcon {
+	position: absolute;
+	transition: 0.4s;
+}
+.telegramIcon {
+	margin-left: 10px;
+}
+.viberIcon {
+	margin-left: 38px;
+}
+
+.telegramIcon:hover path,
+.viberIcon:hover path {
+	fill: tomato;
+}
+.telegramIcon:hover,
+.viberIcon:hover {
+	width: 24px;
+	height: 24px;
+}

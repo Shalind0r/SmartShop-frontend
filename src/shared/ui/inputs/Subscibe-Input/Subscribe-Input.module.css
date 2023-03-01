@@ -1,0 +1,11 @@
+.input {
+	height: 50px;
+	box-sizing: border-box;
+	background-color: var(--color-base-weak);
+	background-clip: padding-box;
+	outline: none;
+	border: 1px solid transparent;
+	border-right: none;
+	border-radius: 5px 0 0 5px;
+	padding-left: 18px;
+}
