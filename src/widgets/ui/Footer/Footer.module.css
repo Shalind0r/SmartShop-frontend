@@ -39,7 +39,7 @@
 	vertical-align: bottom;
 }
 
-hr {
+.footer__container > hr {
 	position: absolute;
 	height: 613px;
 	top: -75px;
