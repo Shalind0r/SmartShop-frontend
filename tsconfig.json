@@ -22,7 +22,8 @@
       "features/*": ["features/*"],
       "entities/*": ["entities/*"],
       "shared/*": ["shared/*"],
-      "icons/*": ["icons/*"]
+      "icons/*": ["icons/*"],
+      "images/*": ["images/*"]
     }
   },
   "include": ["src"],
