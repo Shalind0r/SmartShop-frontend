@@ -2,7 +2,6 @@ import React, { Key, useState } from 'react';
 import classes from './FooterNav.module.css';
 import uuid from 'react-uuid';
 import { ReactComponent as InstagramLogo } from 'icons/social/instagram.svg';
-import { types } from 'sass';
 
 interface state {
 	content: string;

@@ -1,5 +1,11 @@
 :root {
 	/* Палитра цветов */
+	--swiper-pagination-color: #ffffff !important;
+	--swiper-navigation-color: rgba(255, 255, 255, 0.15) !important;
+	--swiper-pagination-bullet-inactive-color: #7d7e80 !important;
+	--swiper-pagination-bullet-inactive-opacity: 0.5;
+	--swiper-pagination-bullet-width: 16px !important;
+	--swiper-pagination-bullet-height: 16px !important;
 	--color-text-main-strong: #000;
 	--color-text-main-weak: #fff;
 	--color-text-secondary: #7d7e80;

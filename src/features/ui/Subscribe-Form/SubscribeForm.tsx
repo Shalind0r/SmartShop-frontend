@@ -5,11 +5,14 @@ import classes from './SubscribeForm.module.css';
 interface types {
 	className?: string;
 }
+//TODO закончить добавить валидацию и эффекты
 const SubscribeForm: React.FC<types> = ({ className }) => {
 	return (
 		<div className={`${classes.form} ${className}`}>
 			<SubscribeInput />
-			<ButtonAction className={classes.btn}>Підписатись</ButtonAction>
+			<ButtonAction type="button" className={classes.btn}>
+				Підписатись
+			</ButtonAction>
 		</div>
 	);
 };

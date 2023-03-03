@@ -11,6 +11,7 @@ export default defineConfig({
 			entities: '/src/entities',
 			shared: '/src/shared',
 			icons: '/src/shared/static/images/icons',
+			images: '/src/shared/static/images',
 		},
 	},
 	plugins: [react(), svgr()],
