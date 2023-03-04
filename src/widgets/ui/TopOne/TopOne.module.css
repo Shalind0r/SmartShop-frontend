@@ -1,0 +1,24 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	max-width: 1900px;
+	margin: 0 auto;
+}
+.wrapper > a {
+	margin-bottom: 25px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.wrapper > a:last-child > img {
+	max-width: 368px;
+	height: 210px;
+	align-self: end;
+}
+.wrapper > a:last-child {
+	justify-content: start;
+	background: black;
+}
+.wrapper > a:last-child > h4 {
+	color: var(--color-text-main-weak);
+}

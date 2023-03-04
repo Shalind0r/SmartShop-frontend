@@ -1,0 +1,22 @@
+.card {
+	max-width: 455px;
+	height: 300px;
+	border: 1px solid var(--color-divider);
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--color-text-main-weak);
+	transition: 0.3s;
+	text-decoration: none;
+}
+.card > h4 {
+	color: var(--color-text-main-strong);
+}
+.card > span {
+	color: var(--color-text-additional);
+}
+.card:hover {
+	box-shadow: var(--shadow-6);
+}

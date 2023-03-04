@@ -14,7 +14,7 @@ import Slide from 'entities/ui/Slide/Slide';
 interface SwiperType {
 	realIndex: number;
 }
-const Slider: () => JSX.Element = () => {
+const Slider: React.FC = () => {
 	const [activeSlide, setActiveSlide] = useState(0);
 	const handleSlideChange = (swiper: SwiperType) => {
 		setActiveSlide(swiper.realIndex);
