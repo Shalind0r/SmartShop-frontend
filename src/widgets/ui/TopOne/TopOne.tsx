@@ -70,7 +70,13 @@ const TopOne: React.FC = () => {
 			href: '#',
 			price: '',
 		},
-		{ src: Iphone, alt: 'зображення Iphone', title: 'Apple iPhone', href: '#', price: '' },
+		{
+			src: Iphone,
+			alt: 'зображення Iphone',
+			title: 'Apple iPhone',
+			href: '#',
+			price: '',
+		},
 	]);
 
 	return (

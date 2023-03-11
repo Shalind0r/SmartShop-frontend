@@ -6,6 +6,7 @@ import Footer from 'widgets/ui/Footer/Footer';
 import Header from 'widgets/ui/Header/Header';
 import Slider from 'widgets/ui/Slider/Slider';
 import TopOne from 'widgets/ui/TopOne/TopOne';
+import News from 'widgets/ui/News/News';
 
 const App: React.FC = () => {
 	return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
 			<Header />
 			<Slider />
 			<TopOne />
+			<News />
 			<Footer />
 		</div>
 	);

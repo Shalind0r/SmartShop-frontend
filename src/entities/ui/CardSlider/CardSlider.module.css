@@ -1,0 +1,60 @@
+.nextSlide,
+.prevSlide {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-33%);
+	z-index: 5;
+	cursor: pointer;
+}
+.nextSlide {
+	right: 22px;
+}
+.prevSlide {
+	position: absolute;
+	left: 22px;
+}
+
+.prevSlide_disabled {
+	opacity: 0;
+}
+.cardSlider {
+	max-width: 1810px;
+	margin: 0 auto;
+}
+.slider {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.top {
+	max-width: 1720px;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 52px;
+}
+.top > a {
+	color: var(--color-text-additional);
+	text-decoration: none;
+	transition: 0.3s;
+}
+.top > a:hover {
+	color: var(--color-text-link-hover);
+	text-decoration: underline;
+}
+.top > a:hover > svg > path {
+	fill: var(--color-text-link-hover);
+}
+.top > a:active {
+	color: var(--color-text-link-hover);
+}
+.top > a:active > svg > path {
+	fill: var(--color-text-link-active);
+}
+.top > a > svg {
+	margin-left: 4px;
+	vertical-align: middle;
+}

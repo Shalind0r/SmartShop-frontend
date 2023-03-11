@@ -1,0 +1,28 @@
+.card {
+	max-width: 330px;
+	background: var(--color-text-main-weak);
+	text-decoration: none;
+	display: inline-block;
+}
+
+.card > img {
+	max-width: inherit;
+}
+
+.content {
+	margin: 20px 20px;
+}
+.content > h4 {
+	color: var(--color-base-strong);
+	margin-bottom: 20px;
+}
+.content {
+	margin-bottom: 20px;
+}
+.content > span,
+.content > p {
+	color: var(--color-text-secondary);
+}
+.card:hover {
+	box-shadow: var(--shadow-6);
+}

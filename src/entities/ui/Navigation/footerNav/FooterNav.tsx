@@ -52,9 +52,7 @@ const FooterNav: React.FC<types> = ({ className }) => {
 	return (
 		<div className={`${classes.footerNav} ${className}`}>
 			<div className={classes.catalog}>
-				<h4 className={`${classes.footerNav__title} typography--h4 `}>
-					Каталог
-				</h4>
+				<h4 className={`${classes.footerNav__title} typography--h4 `}>Каталог</h4>
 				{buildNav(navItem.catalog)}
 			</div>
 			<div className={classes.company}>
