@@ -1,0 +1,86 @@
+.productCard {
+	max-width: 270px;
+	padding: 20px;
+	height: 452px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: relative;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+.image {
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 80px;
+}
+
+.productTop > svg {
+	top: 20px;
+	position: absolute;
+	right: 20px;
+}
+
+.labelWrapper {
+	top: 20px;
+	position: absolute;
+	z-index: 2;
+}
+.label {
+	padding: 2px 10px;
+	color: var(--color-text-main-weak);
+}
+.labelDiscount {
+	background: var(--color-label-discount);
+	margin-bottom: 5px;
+}
+.labelPopular {
+	background: var(--color-label-popular);
+	margin-bottom: 5px;
+}
+.labelNew {
+	background: var(--color-label-new);
+	margin-bottom: 5px;
+}
+.disabled {
+	display: none;
+}
+
+.subInfo {
+	display: flex;
+	justify-content: space-between;
+}
+.ratingActive > g > path {
+	fill: var(--color-rating-star);
+}
+.rating > svg:not(:first-child) {
+	margin-left: 5px;
+}
+
+.comments {
+	display: flex;
+	align-items: flex-start;
+	color: var(--color-text-additional);
+}
+.comments > span,
+.buy > p > span {
+	color: var(--color-text-additional);
+	margin-left: 10px;
+}
+.description > p {
+	color: var(--color-base-strong);
+}
+.buy > p {
+	color: var(--color-base-strong);
+}
+.buy {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.buy > p > span {
+	text-decoration: line-through var(--color-critic-strong);
+}
+.buy > svg > path {
+	fill: var(--color-text-additional);
+}

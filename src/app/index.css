@@ -6,6 +6,9 @@
 	--swiper-pagination-bullet-inactive-opacity: 0.5;
 	--swiper-pagination-bullet-width: 16px !important;
 	--swiper-pagination-bullet-height: 16px !important;
+	--color-label-discount: #de969f;
+	--color-label-popular: #aba0e1;
+	--color-label-new: #6dd7a4;
 	--color-text-main-strong: #000;
 	--color-text-main-weak: #fff;
 	--color-text-secondary: #7d7e80;

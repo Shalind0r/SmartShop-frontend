@@ -14,11 +14,14 @@ interface propsType {
 }
 interface SwiperType {
 	realIndex: number;
+	isEnd: boolean;
 }
 const CardSlider: React.FC<propsType> = (props) => {
 	const [activeSlide, setActiveSlide] = useState(0);
+	const [isLastSlide, setIsLastSlide] = useState(false);
 	const handleSlideChange = (swiper: SwiperType) => {
 		setActiveSlide(swiper.realIndex);
+		swiper.isEnd ? setIsLastSlide(true) : setIsLastSlide(false);
 	};
 
 	return (
@@ -63,7 +66,12 @@ const CardSlider: React.FC<propsType> = (props) => {
 						activeSlide === 0 ? classes.prevSlide_disabled : ''
 					}`}
 				/>
-				<SliderNav type={'next'} className={classes.nextSlide} />
+				<SliderNav
+					type={'next'}
+					className={`${classes.nextSlide} ${
+						isLastSlide ? classes.prevSlide_disabled : ''
+					}`}
+				/>
 			</Swiper>
 		</div>
 	);
