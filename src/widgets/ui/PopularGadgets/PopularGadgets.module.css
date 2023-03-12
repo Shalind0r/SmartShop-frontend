@@ -1,0 +1,15 @@
+.popularGadgets {
+	max-width: 1740px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.popularGadgets > h3 {
+	margin-bottom: 52px;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+.wrapper > a:not(:first-child) {
+	margin-left: 10px;
+}

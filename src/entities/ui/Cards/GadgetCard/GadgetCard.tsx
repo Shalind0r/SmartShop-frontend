@@ -24,15 +24,17 @@ const GadgetCard: React.FC<propTypes> = (props) => {
 					: ''
 			}
 		>
-			<span className={classes.image}>
+			<div className={classes.image}>
 				<img src={props.src} alt={props.alt} />
-			</span>
-			<p className={'typography--h4'}>{props.title}</p>
-			{props.type === 'popular' ? (
-				<span className={'typography--base'}>{props.price}</span>
-			) : (
-				''
-			)}
+			</div>
+			<div className={classes.text}>
+				<p className={'typography--h4'}>{props.title}</p>
+				{props.type === 'popular' ? (
+					<span className={'typography--base'}>{props.price}</span>
+				) : (
+					''
+				)}
+			</div>
 		</a>
 	);
 };

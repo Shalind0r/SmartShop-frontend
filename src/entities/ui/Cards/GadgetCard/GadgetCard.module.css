@@ -1,20 +1,19 @@
 .smallCard {
 	max-width: 415px;
-	background: var(--color-text-main-weak);
 	color: var(--color-text-main-strong);
-	border-radius: 4px;
 }
 
 .card {
-	display: inline-block;
 	text-decoration: none;
 	text-align: center;
-	overflow: hidden;
+	display: block;
+	border-radius: 4px;
 }
 .image {
+	width: inherit;
 	display: inline-block;
 	overflow: hidden;
-	border-radius: 4px;
+	border-radius: 4px 4px 0px 0px;
 }
 .smallCard > image {
 	max-height: 253px;
@@ -29,8 +28,15 @@
 	z-index: 2;
 	transform: scale(1.2);
 }
-.smallCard > p,
-.wideCard > p {
+.text {
+	border-radius: 0px 0px 4px 4px;
+}
+.smallCard > .text {
+	background: var(--color-text-main-weak);
+	margin-top: -5px;
+}
+.smallCard > .text,
+.wideCard > .text {
 	padding: 26px 0;
 }
 .wideCard {
@@ -38,8 +44,10 @@
 	position: relative;
 	z-index: 1;
 }
-
-.wideCard > p {
+.wideCard > .image {
+	border-radius: 4px;
+}
+.wideCard > .text {
 	color: var(--color-text-main-weak);
 	position: absolute;
 	z-index: 2;
@@ -48,15 +56,16 @@
 	transform: translateX(-50%);
 }
 .popularCard {
-	max-width: 336px;
 	color: var(--color-text-main-weak);
 	background: var(--color-text-main-strong);
+	display: grid;
 }
-.popularCard > p {
+.popularCard > .text {
+	align-self: flex-end;
 	padding-top: 12px;
 }
 
-.popularCard > span {
+.popularCard > .text > span {
 	display: inline-block;
 	padding-bottom: 14px;
 	color: var(--color-text-additional);
