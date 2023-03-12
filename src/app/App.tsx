@@ -8,6 +8,7 @@ import Slider from 'widgets/ui/Slider/Slider';
 import TopOne from 'widgets/ui/TopOne/TopOne';
 import News from 'widgets/ui/News/News';
 import Popular from 'widgets/ui/Popular/Popular';
+import GadgetsDiscount from 'widgets/ui/GadgetsDiscount/GadgetsDiscount';
 
 const App: React.FC = () => {
 	return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
 			<TopOne />
 			<News />
 			<Popular />
+			<GadgetsDiscount />
 			<Footer />
 		</div>
 	);

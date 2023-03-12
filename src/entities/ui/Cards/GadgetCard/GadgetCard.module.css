@@ -1,0 +1,68 @@
+.smallCard {
+	max-width: 415px;
+	background: var(--color-text-main-weak);
+	color: var(--color-text-main-strong);
+	border-radius: 4px;
+}
+
+.card {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	overflow: hidden;
+}
+.image {
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 4px;
+}
+.smallCard > image {
+	max-height: 253px;
+}
+.image > img {
+	max-width: 100%;
+	transition: 0.5s;
+	display: block;
+}
+.smallCard:hover > .image > img,
+.wideCard:hover > .image > img {
+	z-index: 2;
+	transform: scale(1.2);
+}
+.smallCard > p,
+.wideCard > p {
+	padding: 26px 0;
+}
+.wideCard {
+	max-width: 850px;
+	position: relative;
+	z-index: 1;
+}
+
+.wideCard > p {
+	color: var(--color-text-main-weak);
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.popularCard {
+	max-width: 336px;
+	color: var(--color-text-main-weak);
+	background: var(--color-text-main-strong);
+}
+.popularCard > p {
+	padding-top: 12px;
+}
+
+.popularCard > span {
+	display: inline-block;
+	padding-bottom: 14px;
+	color: var(--color-text-additional);
+	opacity: 0;
+	transition: 0.5s;
+}
+.popularCard:hover > span {
+	opacity: 1;
+}
