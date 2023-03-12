@@ -9,6 +9,7 @@ import TopOne from 'widgets/ui/TopOne/TopOne';
 import News from 'widgets/ui/News/News';
 import Popular from 'widgets/ui/Popular/Popular';
 import GadgetsDiscount from 'widgets/ui/GadgetsDiscount/GadgetsDiscount';
+import Discount from 'widgets/ui/Discount/Discount';
 
 const App: React.FC = () => {
 	return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
 			<News />
 			<Popular />
 			<GadgetsDiscount />
+			<Discount />
 			<Footer />
 		</div>
 	);
