@@ -18,6 +18,7 @@ const PopularGadgets: React.FC = () => {
 					type={'popular'}
 					href={'#'}
 					title={'Laptop & Desktop'}
+					price={' от 4 100 ₴'}
 				/>
 				<GadgetCard
 					src={imac}
@@ -25,6 +26,7 @@ const PopularGadgets: React.FC = () => {
 					type={'popular'}
 					href={'#'}
 					title={'iMac 2021'}
+					price={' от 4 100 ₴'}
 				/>
 				<GadgetCard
 					src={smartwatch}
@@ -32,6 +34,7 @@ const PopularGadgets: React.FC = () => {
 					type={'popular'}
 					href={'#'}
 					title={'Smart Watch'}
+					price={' от 4 100 ₴'}
 				/>
 				<GadgetCard
 					src={piano}
@@ -39,6 +42,7 @@ const PopularGadgets: React.FC = () => {
 					type={'popular'}
 					href={'#'}
 					title={'Piano Gadgets'}
+					price={' от 4 100 ₴'}
 				/>
 				<GadgetCard
 					src={conditioner}
@@ -46,6 +50,7 @@ const PopularGadgets: React.FC = () => {
 					type={'popular'}
 					href={'#'}
 					title={'Air Mini Conditioner'}
+					price={' от 4 100 ₴'}
 				/>
 			</div>
 		</div>

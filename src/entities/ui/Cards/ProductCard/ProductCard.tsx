@@ -74,9 +74,13 @@ const ProductCard: React.FC<propTypes> = (props) => {
 					<div className={classes.buy}>
 						<p className={'typography--h4'}>
 							{props.price} &#x20b4;
-							<span className={'typography--base'}>
-								{props.oldPrice} &#x20b4;
-							</span>
+							{props.oldPrice ? (
+								<span className={'typography--base'}>
+									{props.oldPrice} &#x20b4;
+								</span>
+							) : (
+								''
+							)}
 						</p>
 						<BasketIcon />
 					</div>

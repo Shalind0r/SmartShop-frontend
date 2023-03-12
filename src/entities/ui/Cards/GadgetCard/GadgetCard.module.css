@@ -62,16 +62,32 @@
 }
 .popularCard > .text {
 	align-self: flex-end;
-	padding-top: 12px;
+	height: 72px;
+	position: relative;
 }
 
 .popularCard > .text > span {
 	display: inline-block;
-	padding-bottom: 14px;
 	color: var(--color-text-additional);
 	opacity: 0;
 	transition: 0.5s;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 14px;
 }
-.popularCard:hover > span {
+.popularCard > .text > p {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	bottom: 26px;
+	transition: 0.35s;
+}
+.popularCard:hover > .text > p {
+	bottom: 35px;
+}
+.popularCard:hover > .text > span {
+	transition-delay: 0.2s;
 	opacity: 1;
 }

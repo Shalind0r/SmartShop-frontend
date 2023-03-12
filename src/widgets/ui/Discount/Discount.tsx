@@ -15,7 +15,7 @@ const Discount: React.FC = () => {
 		{
 			href: '#',
 			src: appleWatch,
-			alt: 'зображення appleWatch',
+			alt: 'зображення appleWatch.svg',
 			discount: true,
 			title: 'Beats Powerbeats Pro, серия Totally Wireless, «вогненно-червоний»',
 			price: '214 999',
