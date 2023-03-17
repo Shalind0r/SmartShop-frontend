@@ -10,7 +10,7 @@ import ipad from 'shared/static/images/GadgetDiscount/ipad.svg';
 const GadgetsDiscount: React.FC = () => {
 	return (
 		<div className={classes.gadgetDiscount}>
-			<div className={classes.wrapper}>
+			<div className={`${classes.wrapper} container`}>
 				<h3 className={'typography--h3'}>Знижки на гаджеты</h3>
 				<div className={classes.wrapper__item}>
 					<GadgetCard

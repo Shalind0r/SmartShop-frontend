@@ -9,7 +9,7 @@ import conditioner from 'shared/static/images/PopularGadgets/conditioner.svg';
 import classes from './PopularGadgets.module.css';
 const PopularGadgets: React.FC = () => {
 	return (
-		<div className={classes.popularGadgets}>
+		<div className={`${classes.popularGadgets} container`}>
 			<h3 className={'typography--h3'}>Популярні гаджети</h3>
 			<div className={classes.wrapper}>
 				<GadgetCard

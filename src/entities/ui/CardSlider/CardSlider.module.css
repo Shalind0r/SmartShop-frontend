@@ -17,10 +17,7 @@
 .prevSlide_disabled {
 	opacity: 0;
 }
-.cardSlider {
-	max-width: 1810px;
-	margin: 0 auto;
-}
+
 .slider {
 	position: relative;
 	display: flex;
@@ -29,32 +26,10 @@
 	padding-right: 10px;
 }
 .top {
-	max-width: 1720px;
+	max-width: 1740px;
 	display: flex;
 	justify-content: space-between;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 52px;
-}
-.top > a {
-	color: var(--color-text-additional);
-	text-decoration: none;
-	transition: 0.3s;
-}
-.top > a:hover {
-	color: var(--color-text-link-hover);
-	text-decoration: underline;
-}
-.top > a:hover > svg > path {
-	fill: var(--color-text-link-hover);
-}
-.top > a:active {
-	color: var(--color-text-link-hover);
-}
-.top > a:active > svg > path {
-	fill: var(--color-text-link-active);
-}
-.top > a > svg {
-	margin-left: 4px;
-	vertical-align: middle;
 }

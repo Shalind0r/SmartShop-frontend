@@ -72,7 +72,7 @@ const Novelties: React.FC = () => {
 		},
 	];
 	return (
-		<CardSlider title={'Новинки'} label={'Все новинки'}>
+		<CardSlider title={'Новинки'} label={'Все новинки'} label_href={'#'}>
 			{renderComponent({
 				data: state,
 				wrapper: SwiperSlide,

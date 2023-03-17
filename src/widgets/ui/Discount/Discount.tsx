@@ -79,7 +79,7 @@ const Discount: React.FC = () => {
 		},
 	];
 	return (
-		<CardSlider title={'Знижки до 36%'} label={'Всі акційні товари'}>
+		<CardSlider title={'Знижки до 36%'} label={'Всі акційні товари'} label_href={'#'}>
 			{renderComponent({
 				data: state,
 				wrapper: SwiperSlide,

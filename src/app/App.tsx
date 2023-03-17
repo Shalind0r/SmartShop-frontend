@@ -12,6 +12,8 @@ import GadgetsDiscount from 'widgets/ui/GadgetsDiscount/GadgetsDiscount';
 import Discount from 'widgets/ui/Discount/Discount';
 import PopularGadgets from 'widgets/ui/PopularGadgets/PopularGadgets';
 import Novelties from 'widgets/ui/Novelties/Novelties';
+import Advances from 'widgets/ui/Advances/Advances';
+import AdvancesFirst from 'widgets/ui/Advances/Advances';
 
 const App: React.FC = () => {
 	return (
@@ -25,6 +27,7 @@ const App: React.FC = () => {
 			<Discount />
 			<PopularGadgets />
 			<Novelties />
+			<AdvancesFirst />
 			<Footer />
 		</div>
 	);

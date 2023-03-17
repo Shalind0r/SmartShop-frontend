@@ -95,7 +95,11 @@ const News: React.FC = () => {
 	]);
 	return (
 		<div className={classes.news}>
-			<CardSlider title={'Акции и новости'} label={'Все акции и новости'}>
+			<CardSlider
+				title={'Акции и новости'}
+				label={'Все акции и новости'}
+				label_href={'#'}
+			>
 				{renderComponent({
 					data: state,
 					wrapper: SwiperSlide,

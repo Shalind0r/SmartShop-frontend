@@ -8,23 +8,7 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.logo {
-	margin-right: 44px;
-	display: flex;
-}
-.logo > svg {
-	margin-right: 8px;
-}
-.logo__text > p:first-child {
-	color: var(--color-action-primary);
-}
-.logo__text > p:first-child > span {
-	color: var(--color-text-additional);
-}
-.logo__text > p:last-child {
-	color: var(--color-text-additional);
-	letter-spacing: 0.115em;
-}
+
 .header__left {
 	display: flex;
 }

@@ -5,12 +5,13 @@ import SliderNav from 'shared/ui/buttons/SliderNav/SliderNav';
 import { Swiper } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { ReactComponent as Arrow } from 'shared/static/images/icons/buttons/arrow.svg';
+import LinkWithArrow from 'shared/ui/links/LinkWithArrow/LinkWithArrow';
 
 interface propsType {
 	children: ReactNode;
 	title: string;
 	label: string;
+	label_href: string;
 }
 interface SwiperType {
 	realIndex: number;
@@ -25,12 +26,10 @@ const CardSlider: React.FC<propsType> = (props) => {
 	};
 
 	return (
-		<div className={`${classes.cardSlider}`}>
+		<div className={`container`}>
 			<div className={classes.top}>
 				<h3 className={'typography--h3'}>{props.title}</h3>
-				<a href="#" className={'typography--label'}>
-					{props.label} <Arrow />
-				</a>
+				<LinkWithArrow content={props.label} href={props.label_href} />
 			</div>
 			<Swiper
 				className={`${classes.slider}  `}

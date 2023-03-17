@@ -1,0 +1,23 @@
+.logo {
+	margin-right: 44px;
+	display: flex;
+}
+.logo > svg {
+	margin-right: 8px;
+}
+.logo__icon > g > path {
+	fill: var(--color-text-main-strong);
+}
+.defaultLogo__text > p:first-child {
+	color: var(--color-action-primary);
+}
+.logo__text > p:first-child > span {
+	color: var(--color-text-additional);
+}
+.logo__text > p:last-child {
+	color: var(--color-text-additional);
+	letter-spacing: 0.115em;
+}
+.advancesLogo__text > p:first-child {
+	color: var(--color-text-main-strong);
+}

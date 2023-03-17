@@ -67,7 +67,7 @@ const Popular: React.FC = () => {
 		},
 	];
 	return (
-		<CardSlider title={'Популярное'} label={'Всі популярні товари'}>
+		<CardSlider title={'Популярное'} label={'Всі популярні товари'} label_href={'#'}>
 			{renderComponent({
 				data: state,
 				wrapper: SwiperSlide,
