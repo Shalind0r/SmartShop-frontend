@@ -12,8 +12,8 @@ import GadgetsDiscount from 'widgets/ui/GadgetsDiscount/GadgetsDiscount';
 import Discount from 'widgets/ui/Discount/Discount';
 import PopularGadgets from 'widgets/ui/PopularGadgets/PopularGadgets';
 import Novelties from 'widgets/ui/Novelties/Novelties';
-import Advances from 'widgets/ui/Advances/Advances';
-import AdvancesFirst from 'widgets/ui/Advances/Advances';
+import AdvancesFirst from 'widgets/ui/AdvancesFirst/Advances';
+import AdvancesSecond from 'widgets/ui/AdvancesSecond/AdvancesSecond';
 
 const App: React.FC = () => {
 	return (
@@ -28,6 +28,7 @@ const App: React.FC = () => {
 			<PopularGadgets />
 			<Novelties />
 			<AdvancesFirst />
+			<AdvancesSecond />
 			<Footer />
 		</div>
 	);

@@ -1,0 +1,8 @@
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+.advancesSecond {
+	padding: 145px 0;
+	background: var(--color-base-strong);
+}

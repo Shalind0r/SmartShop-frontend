@@ -42,6 +42,7 @@ const Footer: React.FC = () => {
 							2022 - Надійний інтернет супермаркет «Smartshop.com»
 						</p>
 					</div>
+					{/*TODO пофиксить роздилитель*/}
 					<hr />
 					<div className={classes.footer__rightSide}>
 						<FooterNav />
