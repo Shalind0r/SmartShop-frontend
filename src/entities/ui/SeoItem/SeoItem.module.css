@@ -1,0 +1,9 @@
+.seoItem > h4 {
+	margin: 24px 0;
+}
+.seoItem > p {
+	color: var(--color-text-secondary);
+}
+.seoItem {
+	margin-right: 24px;
+}

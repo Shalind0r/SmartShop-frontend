@@ -15,6 +15,7 @@ import Novelties from 'widgets/ui/Novelties/Novelties';
 import AdvancesFirst from 'widgets/ui/AdvancesFirst/Advances';
 import AdvancesSecond from 'widgets/ui/AdvancesSecond/AdvancesSecond';
 import { Scrollbars } from 'react-custom-scrollbars';
+import SEO from 'widgets/ui/SEO/SEO';
 const App: React.FC = () => {
 	return (
 		<div className="App">
@@ -25,7 +26,6 @@ const App: React.FC = () => {
 				renderThumbVertical={(props) => (
 					<div {...props} className="thumb-vertical" />
 				)}
-				className={'scroll'}
 				style={{ width: '100vw', height: '100vh' }}
 			>
 				<div className="content">
@@ -40,6 +40,7 @@ const App: React.FC = () => {
 					<Novelties />
 					<AdvancesFirst />
 					<AdvancesSecond />
+					<SEO />
 					<Footer />
 				</div>
 			</Scrollbars>
