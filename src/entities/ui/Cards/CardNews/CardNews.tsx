@@ -9,6 +9,7 @@ interface propsType {
 	date: string;
 	href: string;
 }
+//TODO выровнять карточки
 const CardNews: React.FC<propsType> = (props) => {
 	return (
 		<a href={props.href} className={`${classes.card}  ${props.className}`}>
