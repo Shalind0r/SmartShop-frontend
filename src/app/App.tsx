@@ -25,20 +25,23 @@ const App: React.FC = () => {
 				renderThumbVertical={(props) => (
 					<div {...props} className="thumb-vertical" />
 				)}
+				className={'scroll'}
 				style={{ width: '100vw', height: '100vh' }}
 			>
-				<Header />
-				<Slider />
-				<TopOne />
-				<News />
-				<Popular />
-				<GadgetsDiscount />
-				<Discount />
-				<PopularGadgets />
-				<Novelties />
-				<AdvancesFirst />
-				<AdvancesSecond />
-				<Footer />
+				<div className="content">
+					<Header />
+					<Slider />
+					<TopOne />
+					<News />
+					<Popular />
+					<GadgetsDiscount />
+					<Discount />
+					<PopularGadgets />
+					<Novelties />
+					<AdvancesFirst />
+					<AdvancesSecond />
+					<Footer />
+				</div>
 			</Scrollbars>
 		</div>
 	);

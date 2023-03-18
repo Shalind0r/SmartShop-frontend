@@ -179,3 +179,6 @@ body {
 	right: 0;
 	height: 100vh;
 }
+.content {
+	padding-right: 10px;
+}
