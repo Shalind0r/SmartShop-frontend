@@ -10,7 +10,7 @@ import macbook from 'shared/static/images/Discount/macbook.svg';
 import { SwiperSlide } from 'swiper/react';
 import ProductCard from 'entities/ui/Cards/ProductCard/ProductCard';
 
-const Discount: React.FC = () => {
+const Discount: React.FC<{ className?: string }> = ({ className }) => {
 	const state = [
 		{
 			href: '#',
@@ -79,7 +79,12 @@ const Discount: React.FC = () => {
 		},
 	];
 	return (
-		<CardSlider title={'Знижки до 36%'} label={'Всі акційні товари'} label_href={'#'}>
+		<CardSlider
+			className={className}
+			title={'Знижки до 36%'}
+			label={'Всі акційні товари'}
+			label_href={'#'}
+		>
 			{renderComponent({
 				data: state,
 				wrapper: SwiperSlide,

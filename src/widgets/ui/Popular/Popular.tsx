@@ -9,7 +9,7 @@ import { renderComponent } from 'widgets/helper/renderComponent';
 import CardSlider from 'entities/ui/CardSlider/CardSlider';
 import { SwiperSlide } from 'swiper/react';
 
-const Popular: React.FC = () => {
+const Popular: React.FC<{ className?: string }> = ({ className }) => {
 	const state = [
 		{
 			href: '#',
@@ -67,7 +67,12 @@ const Popular: React.FC = () => {
 		},
 	];
 	return (
-		<CardSlider title={'Популярное'} label={'Всі популярні товари'} label_href={'#'}>
+		<CardSlider
+			className={className}
+			title={'Популярное'}
+			label={'Всі популярні товари'}
+			label_href={'#'}
+		>
 			{renderComponent({
 				data: state,
 				wrapper: SwiperSlide,

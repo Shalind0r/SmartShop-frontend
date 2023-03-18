@@ -7,9 +7,9 @@ import smartwatch from 'shared/static/images/PopularGadgets/smartwatch.svg';
 import piano from 'shared/static/images/PopularGadgets/piano.svg';
 import conditioner from 'shared/static/images/PopularGadgets/conditioner.svg';
 import classes from './PopularGadgets.module.css';
-const PopularGadgets: React.FC = () => {
+const PopularGadgets: React.FC<{ className?: string }> = ({ className }) => {
 	return (
-		<div className={`${classes.popularGadgets} container`}>
+		<div className={`${classes.popularGadgets} ${className} container`}>
 			<h3 className={'typography--h3'}>Популярні гаджети</h3>
 			<div className={classes.wrapper}>
 				<GadgetCard

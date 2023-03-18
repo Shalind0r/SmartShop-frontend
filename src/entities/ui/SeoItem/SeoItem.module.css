@@ -1,8 +1,9 @@
 .seoItem > h4 {
-	margin: 24px 0;
+	margin-bottom: 24px;
 }
 .seoItem > p {
 	color: var(--color-text-secondary);
+	margin-bottom: 24px;
 }
 .seoItem {
 	margin-right: 24px;

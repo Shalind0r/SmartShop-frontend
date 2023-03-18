@@ -9,7 +9,7 @@ import iphone from 'shared/static/images/Novelties/iphone.svg';
 import samsung from 'shared/static/images/Novelties/samsung.svg';
 import airtag from 'shared/static/images/Novelties/airtag.svg';
 
-const Novelties: React.FC = () => {
+const Novelties: React.FC<{ className?: string }> = ({ className }) => {
 	const state = [
 		{
 			href: '#',
@@ -72,7 +72,12 @@ const Novelties: React.FC = () => {
 		},
 	];
 	return (
-		<CardSlider title={'Новинки'} label={'Все новинки'} label_href={'#'}>
+		<CardSlider
+			className={className}
+			title={'Новинки'}
+			label={'Все новинки'}
+			label_href={'#'}
+		>
 			{renderComponent({
 				data: state,
 				wrapper: SwiperSlide,

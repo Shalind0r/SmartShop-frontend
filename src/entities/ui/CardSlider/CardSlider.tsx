@@ -12,6 +12,7 @@ interface propsType {
 	title: string;
 	label: string;
 	label_href: string;
+	className?: string;
 }
 interface SwiperType {
 	realIndex: number;
@@ -26,7 +27,7 @@ const CardSlider: React.FC<propsType> = (props) => {
 	};
 
 	return (
-		<div className={`container`}>
+		<div className={` container ${props.className}`}>
 			<div className={classes.top}>
 				<h3 className={'typography--h3'}>{props.title}</h3>
 				<LinkWithArrow content={props.label} href={props.label_href} />

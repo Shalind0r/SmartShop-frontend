@@ -80,7 +80,7 @@ const TopOne: React.FC = () => {
 	]);
 
 	return (
-		<div className={classes.wrapper}>
+		<div className={classes.topOne}>
 			{renderComponent({
 				data: state,
 				component: CardsTop,

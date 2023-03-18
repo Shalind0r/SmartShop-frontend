@@ -6,6 +6,9 @@ import { Scrollbars } from 'react-custom-scrollbars';
 const Seo: React.FC<{ className?: string }> = ({ className }) => {
 	return (
 		<div className={`${classes.seo} ${className}`}>
+			<h3 className={'typography--h3'}>
+				SEO Текст гаджетів, які занурять вас у віртуальну реальність
+			</h3>
 			<Scrollbars
 				renderTrackVertical={(props) => (
 					<div {...props} className={classes.trackVertical} />
@@ -15,9 +18,6 @@ const Seo: React.FC<{ className?: string }> = ({ className }) => {
 				)}
 				style={{ width: '100%', height: 304 }}
 			>
-				<h3 className={'typography--h3'}>
-					SEO Текст гаджетів, які занурять вас у віртуальну реальність
-				</h3>
 				<div className={classes.content}>
 					<SeoItem title={'Інтернет магазин побутової техніки та електроніки'}>
 						Як прийнято вважати, інтерактивні прототипи є не що інше, як

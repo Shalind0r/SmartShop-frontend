@@ -7,9 +7,9 @@ import tablet from 'shared/static/images/GadgetDiscount/planshet.svg';
 import electricScooter from 'shared/static/images/GadgetDiscount/electroScooter.svg';
 import monitors from 'shared/static/images/GadgetDiscount/monitors.svg';
 import ipad from 'shared/static/images/GadgetDiscount/ipad.svg';
-const GadgetsDiscount: React.FC = () => {
+const GadgetsDiscount: React.FC<{ className?: string }> = ({ className }) => {
 	return (
-		<div className={classes.gadgetDiscount}>
+		<div className={`${classes.gadgetDiscount} ${className}`}>
 			<div className={`${classes.wrapper} container`}>
 				<h3 className={'typography--h3'}>Знижки на гаджеты</h3>
 				<div className={classes.wrapper__item}>
