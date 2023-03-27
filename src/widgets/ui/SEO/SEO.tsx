@@ -1,7 +1,7 @@
 import React from 'react';
 import SeoItem from 'entities/ui/SeoItem/SeoItem';
 import classes from './SEO.module.css';
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 const Seo: React.FC<{ className?: string }> = ({ className }) => {
 	return (

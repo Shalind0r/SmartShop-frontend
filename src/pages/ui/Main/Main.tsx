@@ -10,9 +10,9 @@ import Novelties from 'widgets/ui/Novelties/Novelties';
 import AdvancesFirst from 'widgets/ui/AdvancesFirst/Advances';
 import AdvancesSecond from 'widgets/ui/AdvancesSecond/AdvancesSecond';
 import SEO from 'widgets/ui/SEO/SEO';
-import classes from './MainPage.module.css';
+import classes from './Main.module.css';
 
-const MainPage: React.FC = () => {
+const Main: React.FC = () => {
 	return (
 		<div>
 			<Slider />
@@ -30,4 +30,4 @@ const MainPage: React.FC = () => {
 	);
 };
 
-export default MainPage;
+export default Main;

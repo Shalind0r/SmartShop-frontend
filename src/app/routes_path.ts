@@ -1,0 +1,13 @@
+export const MainRoute = '/';
+export const AuthRoute = '/auth';
+export const RegistrationRoute = '/registration';
+export const BasketRoute = '/basket';
+export const SearchRoute = '/search';
+export const ProfileRoute = '/profile';
+export const ProductListRoute = '/product-list';
+export const ProductRoute = '/product';
+export const CatalogRoute = '/catalog';
+export const ContactsRoute = '/contacts';
+export const FaqRoute = '/faq';
+export const BlogListRoute = '/blog-list';
+export const BlogRoute = '/blog';
