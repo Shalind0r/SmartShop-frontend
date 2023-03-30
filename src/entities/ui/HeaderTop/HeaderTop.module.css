@@ -1,0 +1,38 @@
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+.header {
+    background: var(--color-base-strong);
+    padding: 12px 0;
+}
+
+.navbar > a, .profile {
+    color: var(--color-text-main-weak);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.navbar > a:hover, .profile:hover {
+    color: var(--color-text-link-hover);
+    text-decoration: underline;
+}
+
+.navbar > a:active, .profile:active {
+    color: var(--color-text-link-active);
+}
+
+.profile {
+    flex-grow: 2;
+    text-align: right;
+}
