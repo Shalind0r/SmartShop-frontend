@@ -3,7 +3,6 @@ import {
 	BasketRoute,
 	BlogListRoute,
 	BlogRoute,
-	CatalogRoute,
 	ContactsRoute,
 	FaqRoute,
 	MainRoute,
@@ -61,10 +60,6 @@ export const publicRoutes = [
 	{
 		path: ProductRoute + '/:id',
 		component: Product,
-	},
-	{
-		path: CatalogRoute,
-		component: Catalog,
 	},
 	{
 		path: BlogListRoute,
