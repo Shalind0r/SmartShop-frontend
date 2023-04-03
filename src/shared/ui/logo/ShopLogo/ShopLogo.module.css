@@ -7,14 +7,22 @@
 	display: flex;
 }
 
-.logo > svg {
+.logo__icon,
+.logo__iconAdvances {
 	margin-right: 8px;
 }
 
-.logo__icon > g > path {
+.logo__iconAdvances > g > path {
 	fill: var(--color-text-main-strong);
 }
-
+.logo__iconLarge > g > path {
+	fill: var(--color-text-main-weak);
+}
+.logo__iconLarge {
+	width: 55px;
+	height: 55px;
+	margin-right: 17px;
+}
 .defaultLogo__text > p:first-child {
 	color: var(--color-action-primary);
 }
@@ -30,4 +38,18 @@
 
 .advancesLogo__text > p:first-child {
 	color: var(--color-text-main-strong);
+}
+.largeLogo__text {
+	color: var(--color-text-main-weak);
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+.largeLogo__text > p:first-child {
+	font-size: 53px;
+	line-height: 67px;
+}
+.largeLogo__text > p:last-child {
+	font-size: 27px;
+	letter-spacing: 0.115em;
 }

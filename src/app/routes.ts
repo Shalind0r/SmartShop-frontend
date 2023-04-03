@@ -1,4 +1,5 @@
 import {
+	AboutRoute,
 	AuthRoute,
 	BasketRoute,
 	BlogListRoute,
@@ -25,6 +26,7 @@ import Auth from 'features/ui/Auth/Auth';
 import Registration from 'features/ui/Registration/Registration';
 import Profile from 'pages/ui/Profile/Profile';
 import Basket from 'features/ui/Basket/Basket';
+import About from 'pages/ui/About/About';
 
 export const authRoutes = [
 	{
@@ -60,6 +62,10 @@ export const publicRoutes = [
 	{
 		path: ProductRoute + '/:id',
 		component: Product,
+	},
+	{
+		path: AboutRoute,
+		component: About,
 	},
 	{
 		path: BlogListRoute,

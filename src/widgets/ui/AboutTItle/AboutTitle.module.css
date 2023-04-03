@@ -1,0 +1,27 @@
+.title {
+	max-width: 1980px;
+	margin: 0 auto;
+	position: relative;
+}
+.title > img {
+	max-width: inherit;
+	width: 100%;
+}
+.label {
+	position: absolute;
+	bottom: 24%;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 1140px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.text {
+	text-align: center;
+}
+.text > p {
+	color: var(--color-text-main-weak);
+}

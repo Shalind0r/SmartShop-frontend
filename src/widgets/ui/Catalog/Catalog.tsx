@@ -8,7 +8,7 @@ const Catalog: React.FC = () => {
 	return (
 		<div
 			className={classes.catalog}
-			style={isOpen === false ? { opacity: 0, pointerEvents: 'all' } : {}}
+			style={isOpen === false ? { opacity: 0, zIndex: -1 } : {}}
 		>
 			<div className={`${classes.wrapper} `}>
 				<div className={`${classes.container} container`}>

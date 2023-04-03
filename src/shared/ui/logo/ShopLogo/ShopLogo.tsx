@@ -9,19 +9,29 @@ const ShopLogo: React.FC<{ type?: string }> = ({ type }) => {
 		<NavLink className={classes.shopLogo} to={MainRoute}>
 			<div className={classes.logo}>
 				<SmartShopLogo
-					className={type === 'advances' ? classes.logo__icon : ''}
+					className={
+						type === 'advances'
+							? classes.logo__iconAdvances
+							: type === 'large'
+							? classes.logo__iconLarge
+							: classes.logo__icon
+					}
 				/>
 				<div
 					className={
 						type === 'advances'
 							? `${classes.advancesLogo__text} ${classes.logo__text}`
+							: type === 'large'
+							? `${classes.largeLogo__text} `
 							: `${classes.defaultLogo__text} ${classes.logo__text}`
 					}
 				>
-					<p className='typography--h3'>
+					<p className="typography--h3">
 						SMATRSHOP<span>.COM</span>
 					</p>
-					<p className='typography--small'>ONLINE MARKETING COMPANY</p>
+					<p className="typography--small">
+						ONLINE MARKETING COMPANY
+					</p>
 				</div>
 			</div>
 		</NavLink>

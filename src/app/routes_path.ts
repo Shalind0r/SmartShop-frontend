@@ -5,6 +5,7 @@ export const BasketRoute = '/basket';
 export const SearchRoute = '/search';
 export const ProfileRoute = '/profile';
 export const ProductListRoute = '/product-list';
+export const AboutRoute = '/about';
 export const ProductRoute = '/product';
 export const ContactsRoute = '/contacts';
 export const FaqRoute = '/faq';

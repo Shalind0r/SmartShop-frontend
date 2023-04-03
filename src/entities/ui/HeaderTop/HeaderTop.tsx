@@ -2,8 +2,14 @@ import React from 'react';
 
 import classes from './HeaderTop.module.css';
 import { ReactComponent as ProfileIcon } from 'icons/profile.svg';
-
+import {
+	BlogListRoute,
+	ContactsRoute,
+	AboutRoute,
+	FaqRoute,
+} from 'app/routes_path';
 import ShopLogo from 'shared/ui/logo/ShopLogo/ShopLogo';
+import { NavLink } from 'react-router-dom';
 
 const HeaderTop: React.FC = () => {
 	return (
@@ -11,21 +17,30 @@ const HeaderTop: React.FC = () => {
 			<div className={`${classes.header__wrapper} container`}>
 				<ShopLogo />
 				<div className={`${classes.navbar} typography--base`}>
-					<a href="#" className={classes.navbar__topItem}>
+					<NavLink
+						to={AboutRoute}
+						className={classes.navbar__topItem}
+					>
 						Компанія
-					</a>
-					<a href="#" className={classes.navbar__topItem}>
+					</NavLink>
+					<NavLink
+						to={BlogListRoute}
+						className={classes.navbar__topItem}
+					>
 						Новини
-					</a>
-					<a href="#" className={classes.navbar__topItem}>
+					</NavLink>
+					<NavLink to={FaqRoute} className={classes.navbar__topItem}>
 						FAQ
-					</a>
-					<a href="#" className={classes.navbar__topItem}>
+					</NavLink>
+					<NavLink to={'saasf'} className={classes.navbar__topItem}>
 						Доставка і оплата
-					</a>
-					<a href="#" className={classes.navbar__topItem}>
+					</NavLink>
+					<NavLink
+						to={ContactsRoute}
+						className={classes.navbar__topItem}
+					>
 						Контакти
-					</a>
+					</NavLink>
 				</div>
 				<a href={'#'} className={`${classes.profile} typography--base`}>
 					<ProfileIcon />
