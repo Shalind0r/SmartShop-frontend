@@ -33,7 +33,7 @@ const HeaderBottom: React.FC = () => {
 						className={
 							isOpen === true
 								? `${classes.navbar__catalog} ${classes.active}`
-								: classes.navbar__catalog
+								: `${classes.navbar__catalog} link`
 						}
 					>
 						<CatalogIcon />
@@ -43,20 +43,20 @@ const HeaderBottom: React.FC = () => {
 						style={isOpen === true ? { opacity: 0 } : {}}
 						className={classes.navbar__items}
 					>
-						<a href="#" className={classes.navbar__item}>
+						<a href="#" className={'link'}>
 							Побутова техніка
 						</a>
-						<a href="#" className={classes.navbar__item}>
+						<a href="#" className={'link'}>
 							електроніка
 						</a>
-						<a href="#" className={classes.navbar__item}>
+						<a href="#" className={'link'}>
 							комп’ютерна техніка
 						</a>
-						<a href="#" className={classes.navbar__item}>
+						<a href="#" className={'link'}>
 							дитячі товари
 						</a>
 						<hr />
-						<a href="#" className={classes.navbar__item}>
+						<a href="#" className={'link'}>
 							акції
 							<LightningIcon
 								className={classes.navbar__itemIcon2}

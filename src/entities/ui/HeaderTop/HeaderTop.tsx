@@ -19,30 +19,39 @@ const HeaderTop: React.FC = () => {
 				<div className={`${classes.navbar} typography--base`}>
 					<NavLink
 						to={AboutRoute}
-						className={classes.navbar__topItem}
+						className={`${classes.navbar__topItem} link`}
 					>
 						Компанія
 					</NavLink>
 					<NavLink
 						to={BlogListRoute}
-						className={classes.navbar__topItem}
+						className={`${classes.navbar__topItem} link`}
 					>
 						Новини
 					</NavLink>
-					<NavLink to={FaqRoute} className={classes.navbar__topItem}>
+					<NavLink
+						to={FaqRoute}
+						className={`${classes.navbar__topItem} link`}
+					>
 						FAQ
 					</NavLink>
-					<NavLink to={'saasf'} className={classes.navbar__topItem}>
+					<NavLink
+						to={'saasf'}
+						className={`${classes.navbar__topItem} link`}
+					>
 						Доставка і оплата
 					</NavLink>
 					<NavLink
 						to={ContactsRoute}
-						className={classes.navbar__topItem}
+						className={`${classes.navbar__topItem} link`}
 					>
 						Контакти
 					</NavLink>
 				</div>
-				<a href={'#'} className={`${classes.profile} typography--base`}>
+				<a
+					href={'#'}
+					className={`${classes.profile} typography--base link`}
+				>
 					<ProfileIcon />
 					Особистий кабінет
 				</a>

@@ -1,7 +1,5 @@
-.link:not(:hover) {
-	text-decoration: none;
+.link {
 	color: var(--color-text-main-strong);
-	transition: 0.5s;
 }
 .subText {
 	color: var(--color-text-additional);

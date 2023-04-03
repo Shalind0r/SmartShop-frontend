@@ -3,19 +3,7 @@
 	text-decoration: none;
 	transition: 0.3s;
 }
-.link:hover {
-	color: var(--color-text-link-hover);
-	text-decoration: underline;
-}
-.link:hover > svg > path {
-	fill: var(--color-text-link-hover);
-}
-.link:active {
-	color: var(--color-text-link-hover);
-}
-.link:active > svg > path {
-	fill: var(--color-text-link-active);
-}
+
 .link > svg {
 	margin-left: 4px;
 	vertical-align: middle;

@@ -27,10 +27,20 @@ const NumberImg: React.FC<types> = ({
 				{text}
 			</a>
 			<span>
-				<a href={firstLink} target="_blank" rel="noreferrer nofollow ">
+				<a
+					href={firstLink}
+					target="_blank"
+					className={'link'}
+					rel="noreferrer nofollow "
+				>
 					<TelegramLogo className={classes.telegramIcon} />
 				</a>
-				<a href={secondLink} target="_blank" rel="noreferrer nofollow ">
+				<a
+					href={secondLink}
+					className={'link'}
+					target="_blank"
+					rel="noreferrer nofollow "
+				>
 					<ViberLogo className={classes.viberIcon} />
 				</a>
 			</span>

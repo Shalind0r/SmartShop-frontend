@@ -43,7 +43,7 @@ const FooterNav: React.FC<types> = ({ className }) => {
 	const buildNav = (array: state[]) => {
 		return array.map((item) => (
 			<div className={classes.footerNav__item} key={item.id}>
-				<a className="typography--base-extended" href={item.href}>
+				<a className="typography--base-extended link " href={item.href}>
 					{item.content}
 				</a>
 			</div>
@@ -52,7 +52,9 @@ const FooterNav: React.FC<types> = ({ className }) => {
 	return (
 		<div className={`${classes.footerNav} ${className}`}>
 			<div className={classes.catalog}>
-				<h4 className={`${classes.footerNav__title} typography--h4 `}>Каталог</h4>
+				<h4 className={`${classes.footerNav__title} typography--h4 `}>
+					Каталог
+				</h4>
 				{buildNav(navItem.catalog)}
 			</div>
 			<div className={classes.company}>
@@ -61,10 +63,8 @@ const FooterNav: React.FC<types> = ({ className }) => {
 				</h4>
 				{buildNav(navItem.company)}
 				<div className={classes.footerNav__item}>
-					<a href="#" className="typography--small">
-						<span>
-							<InstagramLogo />
-						</span>
+					<a href="#" className="typography--small link">
+						<InstagramLogo />
 						Ми в соц мережах
 					</a>
 				</div>

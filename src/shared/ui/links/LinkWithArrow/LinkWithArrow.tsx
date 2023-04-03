@@ -7,7 +7,7 @@ interface propTypes {
 }
 const LinkWithArrow: React.FC<propTypes> = ({ href, content }) => {
 	return (
-		<a href={href} className={`typography--label ${classes.link}`}>
+		<a href={href} className={`typography--label ${classes.link}  link`}>
 			{content} <Arrow />
 		</a>
 	);

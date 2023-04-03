@@ -6,10 +6,8 @@
 	margin-bottom: 28px;
 }
 
-.footerNav__item > a:not(:hover) {
-	text-decoration: none;
+.footerNav__item > a {
 	color: var(--color-text-additional);
-	transition: 0.5s;
 }
 
 .catalog > .footerNav__item:last-child,
@@ -20,8 +18,6 @@
 	display: flex;
 	align-items: center;
 }
-.company > .footerNav__item span {
+.company > .footerNav__item > a > svg {
 	margin-right: 10px;
-}
-.support {
 }

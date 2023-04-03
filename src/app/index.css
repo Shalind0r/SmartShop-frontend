@@ -188,14 +188,22 @@ body {
 .content {
 	padding-right: 10px;
 }
-a {
+.link {
 	text-decoration: none;
 	transition: 0.3s;
 }
-a:hover {
+.link:hover {
 	color: var(--color-text-link-hover) !important;
 	text-decoration: underline;
 }
-a:active {
+.link:active {
 	color: var(--color-text-link-active) !important;
+}
+
+.link > svg > path {
+	transition: 0.3s;
+}
+
+.link:hover > svg > path {
+	fill: var(--color-text-link-hover);
 }

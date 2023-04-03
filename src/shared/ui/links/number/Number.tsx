@@ -15,7 +15,7 @@ const Number: React.FC<propsTypes> = ({
 	return (
 		<p className={className}>
 			<a
-				className={`${classes.link} typography--h4`}
+				className={`${classes.link} typography--h4 link`}
 				href={link}
 				target="_blank"
 				rel="nofollow noreferrer"

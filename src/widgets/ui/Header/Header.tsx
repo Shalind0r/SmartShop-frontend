@@ -10,7 +10,9 @@ const Header: React.FC<{ className?: string }> = ({ className }) => {
 	return (
 		<header
 			className={
-				isOpen === true ? `${classes.fixed} ${className}` : className
+				isOpen === true
+					? `${classes.fixed} ${className}`
+					: `${className} ${classes.header}`
 			}
 		>
 			<HeaderTop />
