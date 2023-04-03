@@ -11,19 +11,19 @@ const HeaderTop: React.FC = () => {
 			<div className={`${classes.header__wrapper} container`}>
 				<ShopLogo />
 				<div className={`${classes.navbar} typography--base`}>
-					<a href='#' className={classes.navbar__topItem}>
+					<a href="#" className={classes.navbar__topItem}>
 						Компанія
 					</a>
-					<a href='#' className={classes.navbar__topItem}>
+					<a href="#" className={classes.navbar__topItem}>
 						Новини
 					</a>
-					<a href='#' className={classes.navbar__topItem}>
+					<a href="#" className={classes.navbar__topItem}>
 						FAQ
 					</a>
-					<a href='#' className={classes.navbar__topItem}>
+					<a href="#" className={classes.navbar__topItem}>
 						Доставка і оплата
 					</a>
-					<a href='#' className={classes.navbar__topItem}>
+					<a href="#" className={classes.navbar__topItem}>
 						Контакти
 					</a>
 				</div>
@@ -33,7 +33,6 @@ const HeaderTop: React.FC = () => {
 				</a>
 			</div>
 		</div>
-
 	);
 };
 

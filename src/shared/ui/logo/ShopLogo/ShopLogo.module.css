@@ -1,33 +1,33 @@
 .shopLogo {
-    text-decoration: none;
+	text-decoration: none !important;
 }
 
 .logo {
-    margin-right: 44px;
-    display: flex;
+	margin-right: 44px;
+	display: flex;
 }
 
 .logo > svg {
-    margin-right: 8px;
+	margin-right: 8px;
 }
 
 .logo__icon > g > path {
-    fill: var(--color-text-main-strong);
+	fill: var(--color-text-main-strong);
 }
 
 .defaultLogo__text > p:first-child {
-    color: var(--color-action-primary);
+	color: var(--color-action-primary);
 }
 
 .logo__text > p:first-child > span {
-    color: var(--color-text-additional);
+	color: var(--color-text-additional);
 }
 
 .logo__text > p:last-child {
-    color: var(--color-text-additional);
-    letter-spacing: 0.115em;
+	color: var(--color-text-additional);
+	letter-spacing: 0.115em;
 }
 
 .advancesLogo__text > p:first-child {
-    color: var(--color-text-main-strong);
+	color: var(--color-text-main-strong);
 }

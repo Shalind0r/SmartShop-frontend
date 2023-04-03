@@ -1,6 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import catalogReducer from './reducers/CatalogSlice/CatalogSlice';
 
-const rootReducer = {};
+const rootReducer = combineReducers({
+	catalogReducer,
+});
 
 export const setupStore = () => {
 	return configureStore({

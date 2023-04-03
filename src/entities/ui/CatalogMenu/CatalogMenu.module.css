@@ -1,0 +1,14 @@
+.menu {
+	max-width: 323px !important;
+	width: 100%;
+	padding-top: 33px;
+	opacity: 1 !important;
+	z-index: 20;
+	height: 80vh;
+}
+.menu__item {
+	color: var(--color-base-weak);
+}
+.menu__item:not(:first-child) {
+	margin-top: 20px;
+}

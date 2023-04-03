@@ -5,8 +5,8 @@ import 'shared/static/fonts/fonts.css';
 import Footer from 'widgets/ui/Footer/Footer';
 import Header from 'widgets/ui/Header/Header';
 import { Scrollbars } from 'react-custom-scrollbars-2';
-import Main from 'pages/ui/Main/Main';
 import AppRouter from './AppRouter';
+
 const App: React.FC = () => {
 	return (
 		<div className="App">

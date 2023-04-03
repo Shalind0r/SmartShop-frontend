@@ -17,14 +17,15 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
-      "app/*": ["app/*"],
-      "pages/*": ["pages/*"],
-      "widgets/*": ["widgets/*"],
-      "features/*": ["features/*"],
-      "entities/*": ["entities/*"],
-      "shared/*": ["shared/*"],
-      "icons/*": ["icons/*"],
-      "images/*": ["images/*"]
+		"store/*": ["store/*"],
+        "app/*": ["app/*"],
+      	"pages/*": ["pages/*"],
+		"widgets/*": ["widgets/*"],
+      	"features/*": ["features/*"],
+      	"entities/*": ["entities/*"],
+      	"shared/*": ["shared/*"],
+      	"icons/*": ["icons/*"],
+      	"images/*": ["images/*"]
     }
   },
   "include": ["src"],

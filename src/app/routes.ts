@@ -15,7 +15,7 @@ import {
 import Main from 'pages/ui/Main/Main';
 import ProductList from 'pages/ui/ProductList/ProductList';
 import Product from 'pages/ui/Product/Product';
-import Catalog from 'pages/ui/Catalog/Catalog';
+import Catalog from 'widgets/ui/Catalog/Catalog';
 import BlogList from 'pages/ui/BlogList/BlogList';
 import Blog from 'pages/ui/Blog/Blog';
 import Contacts from 'pages/ui/Contacts/Contacts';
