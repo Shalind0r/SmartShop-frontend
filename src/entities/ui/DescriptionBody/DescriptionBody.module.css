@@ -1,0 +1,32 @@
+.body {
+	display: flex;
+}
+.body > img {
+	max-width: 70%;
+}
+.content {
+	max-width: 554px;
+}
+.subTitle {
+	margin-bottom: 50px;
+}
+.subTitle > span {
+	display: block;
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+	font-weight: 400;
+	font-size: 96px;
+	line-height: 40px;
+}
+.content > p:not(:first-child),
+.content > ul {
+	color: var(--color-text-secondary);
+}
+.content > ul {
+	padding-left: 25px;
+	margin-bottom: 50px;
+}
+.button {
+	max-width: 416px;
+	width: 100%;
+}

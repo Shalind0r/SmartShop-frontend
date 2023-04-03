@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './AboutTitle.module.css';
-import title from 'images/About/title.svg';
+import title from 'shared/static/images/About/title.jpg';
 import ShopLogo from 'shared/ui/logo/ShopLogo/ShopLogo';
 
 const AboutTitle: React.FC = () => {

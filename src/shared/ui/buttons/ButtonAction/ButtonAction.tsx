@@ -1,43 +1,32 @@
 import React from 'react';
 import classes from './ButtonAction.module.css';
+import { NavLink } from 'react-router-dom';
 
-interface props {
+interface IProps {
 	children: string;
 	className?: string;
 	type: string;
 	link?: string;
+	to?: string;
+	onClick?: () => void;
 }
 
-const ButtonAction: React.FC<props> = ({ children, className, type, link }) => {
-	const buttonType = () => {
-		switch (type) {
-			case 'button':
-				return (
-					<button
-						className={`${classes.button} ${className} typography--label`}
-					>
-						{children}
-					</button>
-				);
-				break;
-			case 'link':
-				return (
-					<a
-						href={link}
-						className={`${classes.link} ${className} typography--label`}
-					>
-						{children}
-					</a>
-				);
-				break;
-			default:
-				alert(
-					"Обязательно нужно указать type:'button или link' в компоненте ButtonAction ",
-				);
-		}
-	};
-
-	return <React.Fragment>{buttonType()}</React.Fragment>;
+const ButtonAction: React.FC<IProps> = (props) => {
+	return props.type === 'button' ? (
+		<button
+			onClick={props.onClick}
+			className={`${classes.button} ${props.className} typography--label`}
+		>
+			{props.children}
+		</button>
+	) : props.type === 'link' && props.to ? (
+		<NavLink
+			to={props.to}
+			className={`${classes.link} ${props.className} typography--label`}
+		>
+			{props.children}
+		</NavLink>
+	) : null;
 };
 
 export default ButtonAction;
