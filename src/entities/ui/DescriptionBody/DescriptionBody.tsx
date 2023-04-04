@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './DescriptionBody.module.css';
-import gadgets from 'shared/static/images/About/photo.jpg';
+import gadgets from 'shared/static/images/About/photo.png';
 import ButtonAction from 'shared/ui/buttons/ButtonAction/ButtonAction';
 import { OpenCatalog } from 'store/reducers/CatalogSlice/CatalogSlice';
 import { useAppDispatch } from 'store/hooks/redux';

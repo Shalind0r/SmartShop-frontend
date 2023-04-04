@@ -1,0 +1,19 @@
+.leader {
+	background: var(--color-divider);
+	padding: 290px 0 107px 0;
+	margin-top: -175px;
+}
+.wrapper {
+	max-width: 1138px;
+	margin: 0 auto;
+}
+.wrapper > h2 {
+	text-align: center;
+	margin-bottom: 152px;
+}
+.advances {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	row-gap: 40px;
+	justify-content: space-between;
+}

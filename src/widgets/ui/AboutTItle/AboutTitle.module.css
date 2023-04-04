@@ -1,6 +1,5 @@
 .title {
-	max-width: 1980px;
-	margin: 0 auto;
+	max-width: 100vw;
 	position: relative;
 }
 .title > img {
