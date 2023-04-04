@@ -1,0 +1,11 @@
+.title {
+	position: relative;
+	text-align: center;
+}
+.title > h2 {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 46px;
+	max-width: 435px;
+}

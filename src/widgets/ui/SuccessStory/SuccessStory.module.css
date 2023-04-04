@@ -1,0 +1,38 @@
+.slider {
+	position: relative;
+}
+.control {
+	display: flex;
+	max-width: 821px;
+	margin: 0 auto 90px;
+}
+
+.pagination {
+	max-width: 550px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.pagination__bullet {
+	display: flex;
+	align-items: center;
+	color: var(--color-text-additional);
+	transition: 0.3s;
+	user-select: none;
+}
+
+.pagination__bullet_active {
+	color: var(--color-text-main-strong);
+}
+.slide {
+	flex-direction: column;
+	max-width: 848px;
+	margin: 0 auto;
+	text-align: center;
+}
+.slide > h3 {
+	margin-bottom: 20px;
+}
+.slideBody > p:not(:last-child) {
+	margin-bottom: 80px;
+}

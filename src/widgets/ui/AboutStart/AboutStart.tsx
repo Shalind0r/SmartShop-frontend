@@ -1,9 +1,9 @@
 import React from 'react';
-import classes from './AboutTitle.module.css';
+import classes from './AboutStart.module.css';
 import title from 'shared/static/images/About/title.jpg';
 import ShopLogo from 'shared/ui/logo/ShopLogo/ShopLogo';
 
-const AboutTitle: React.FC = () => {
+const AboutStart: React.FC = () => {
 	return (
 		<div className={classes.title}>
 			<img src={title} alt="зображення приміщеня магазину" />
@@ -19,4 +19,4 @@ const AboutTitle: React.FC = () => {
 	);
 };
 
-export default AboutTitle;
+export default AboutStart;

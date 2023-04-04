@@ -94,7 +94,20 @@
 	line-height: 40px;
 	font-weight: 400;
 }
-
+.typography--decor-small {
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 32px;
+}
+.typography--decor-weight {
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 32px;
+}
 .typography--base {
 	font-size: 15px;
 	line-height: 20px;
