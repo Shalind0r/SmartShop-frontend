@@ -54,3 +54,11 @@
 	font-style: italic;
 	font-display: swap;
 }
+@font-face {
+	font-family: 'PT Serif';
+	src: url('PTSerif-Bold.woff2') format('woff2'),
+		url('PTSerif-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}

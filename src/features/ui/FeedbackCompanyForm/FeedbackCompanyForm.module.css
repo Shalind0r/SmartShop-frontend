@@ -1,0 +1,25 @@
+.form {
+	max-width: 848px;
+	margin: 0 auto;
+	display: grid;
+	gap: 20px;
+	grid-template-areas: 'name email' 'textarea  textarea' 'checkbox checkbox' 'button button';
+}
+
+.name {
+	grid-area: name;
+}
+.email {
+	grid-area: email;
+}
+.textarea {
+	grid-area: textarea;
+}
+.checkbox {
+	grid-area: checkbox;
+	justify-self: self-start;
+}
+.button {
+	width: 100%;
+	grid-area: button;
+}

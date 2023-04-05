@@ -9,11 +9,13 @@ interface IProps {
 	link?: string;
 	to?: string;
 	onClick?: () => void;
+	send?: boolean;
 }
 
 const ButtonAction: React.FC<IProps> = (props) => {
 	return props.type === 'button' ? (
 		<button
+			type={props.send === true ? 'submit' : 'button'}
 			onClick={props.onClick}
 			className={`${classes.button} ${props.className} typography--label`}
 		>

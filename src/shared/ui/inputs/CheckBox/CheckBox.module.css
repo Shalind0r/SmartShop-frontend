@@ -1,0 +1,36 @@
+.checkbox {
+	border: none;
+	padding: 0;
+	display: flex;
+}
+.checkbox > input {
+	position: absolute;
+	visibility: hidden;
+	user-select: none;
+	pointer-events: none;
+}
+
+.check {
+	width: 16px;
+	height: 16px;
+	border: 1px solid var(--color-divider);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s;
+	background-color: var(--color-base-weak);
+}
+.check > svg {
+	opacity: 0;
+	transition: 0.3s;
+}
+.checkbox > input:checked ~ .check {
+	background: var(--color-action-primary);
+}
+.checkbox > input:checked ~ .check > svg {
+	opacity: 1;
+}
+
+.checkbox > span:last-child {
+	margin-left: 10px;
+}

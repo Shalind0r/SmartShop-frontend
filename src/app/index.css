@@ -101,6 +101,13 @@
 	font-size: 22px;
 	line-height: 32px;
 }
+.typography--decor-smallB {
+	font-family: 'PT Serif', serif;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 32px;
+	font-style: normal;
+}
 .typography--decor-weight {
 	font-family: 'PT Serif', serif;
 	font-style: italic;

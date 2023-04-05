@@ -1,0 +1,27 @@
+.slider {
+	max-width: 850px;
+	margin: 0 auto;
+}
+.slide {
+	text-align: center;
+}
+.control {
+	max-width: 1150px;
+	position: relative;
+	margin: 0 auto;
+}
+.slide > p:first-child {
+	margin-bottom: 22px;
+}
+.nextSlide,
+.prevSlide {
+	position: absolute;
+	top: 41px;
+	z-index: 1;
+}
+.prevSlide {
+	left: 5px;
+}
+.nextSlide {
+	right: 5px;
+}
