@@ -1,6 +1,20 @@
+.start {
+	margin-bottom: 93px;
+}
+
 .successStoryAndTeam__title {
 	margin-bottom: 48px;
 }
+.successStoryAndTeam {
+	margin-top: 90px;
+	margin-bottom: 80px;
+}
+.successStory {
+	margin-bottom: 182px;
+}
 .credo {
 	margin-top: -100px;
+}
+.feedback {
+	margin-bottom: 100px;
 }

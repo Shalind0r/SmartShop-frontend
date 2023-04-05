@@ -12,18 +12,18 @@ import FeedbackAboutCompany from 'widgets/ui/FeedbackAboutCompany/FeedbackAboutC
 const About: React.FC = () => {
 	return (
 		<div>
-			<AboutStart />
+			<AboutStart className={classes.start} />
 			<AboutDescription />
 			<AboutLeader />
 			<div className={classes.successStoryAndTeam}>
 				<AboutTitle className={classes.successStoryAndTeam__title}>
 					Історія успіху і <br /> Наша команда
 				</AboutTitle>
-				<SuccessStory />
+				<SuccessStory className={classes.successStory} />
 				<Team />
 				<Credo className={classes.credo} />
 			</div>
-			<FeedbackAboutCompany />
+			<FeedbackAboutCompany className={classes.feedback} />
 		</div>
 	);
 };

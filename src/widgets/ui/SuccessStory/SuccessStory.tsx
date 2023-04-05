@@ -4,7 +4,7 @@ import classes from './SuccessStory.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
 import SliderNav from 'shared/ui/buttons/SliderNav/SliderNav';
-const SuccessStory = () => {
+const SuccessStory: React.FC<{ className?: string }> = ({ className }) => {
 	const state = [
 		{
 			title: '2017',
@@ -77,7 +77,7 @@ const SuccessStory = () => {
 		},
 	};
 	return (
-		<div className={classes.successStory}>
+		<div className={`${className} ${classes.successStory}`}>
 			<div className={classes.content}>
 				<div className={classes.control}>
 					<SliderNav type={'prev'} className={'SuccessPrevSlide'} />

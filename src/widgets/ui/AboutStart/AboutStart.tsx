@@ -3,9 +3,9 @@ import classes from './AboutStart.module.css';
 import title from 'shared/static/images/About/title.jpg';
 import ShopLogo from 'shared/ui/logo/ShopLogo/ShopLogo';
 
-const AboutStart: React.FC = () => {
+const AboutStart: React.FC<{ className?: string }> = ({ className }) => {
 	return (
-		<div className={classes.title}>
+		<div className={`${className} ${classes.title}`}>
 			<img src={title} alt="зображення приміщеня магазину" />
 			<div className={classes.label}>
 				<ShopLogo type={'large'} />

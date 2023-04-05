@@ -4,9 +4,11 @@ import AboutTitle from 'entities/ui/AboutTitle/AboutTitle';
 import FeedbackAboutSlider from 'entities/ui/ FeedbackAboutSlider/FeedbackAboutSlider';
 import FeedbackCompanyForm from 'features/ui/FeedbackCompanyForm/FeedbackCompanyForm';
 
-const FeedbackAboutCompany: React.FC = () => {
+const FeedbackAboutCompany: React.FC<{ className?: string }> = ({
+	className,
+}) => {
 	return (
-		<div>
+		<div className={className}>
 			<AboutTitle className={classes.title}>
 				Відгуки по роботі <br /> з Компанією
 			</AboutTitle>
