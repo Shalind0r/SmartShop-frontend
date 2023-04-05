@@ -1,0 +1,31 @@
+.team {
+	max-width: 1450px;
+	padding: 0 10px;
+	margin: 0 auto;
+	position: relative;
+}
+.team > img {
+	position: absolute;
+	right: 0;
+	top: -110px;
+}
+.team > h3 {
+	text-align: center;
+	max-width: 1138px;
+	margin: 0 auto 96px;
+}
+.wrapper {
+	position: relative;
+}
+.wrapper > div {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(auto, 415px));
+	gap: 20px;
+}
+.wrapper > div:first-child {
+	justify-content: start;
+	margin-bottom: 20px;
+}
+.wrapper > div:last-child {
+	justify-content: end;
+}

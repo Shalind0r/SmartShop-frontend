@@ -1,0 +1,18 @@
+.credo {
+	background: var(--color-base-strong);
+	padding: 326px 0 123px;
+}
+.wrapper {
+	max-width: 1305px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.wrapper > h2 {
+	margin-bottom: 138px;
+	color: var(--color-text-main-weak);
+	text-align-last: center;
+}
+.content {
+	display: flex;
+	justify-content: space-between;
+}

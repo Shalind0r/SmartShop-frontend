@@ -9,6 +9,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import SuccessStory from 'widgets/ui/SuccessStory/SuccessStory';
 import AboutTitle from 'entities/ui/AboutTitle/AboutTitle';
+import Team from 'widgets/ui/Team/Team';
+import Credo from 'widgets/ui/Credo/Credo';
 
 const About: React.FC = () => {
 	return (
@@ -21,6 +23,8 @@ const About: React.FC = () => {
 					Історія успіху і Наша команда
 				</AboutTitle>
 				<SuccessStory />
+				<Team />
+				<Credo className={classes.credo} />
 			</div>
 		</div>
 	);
