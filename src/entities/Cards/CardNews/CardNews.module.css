@@ -6,7 +6,7 @@
 }
 
 .card > img {
-	max-width: inherit;
+	width: 100%;
 }
 
 .content {

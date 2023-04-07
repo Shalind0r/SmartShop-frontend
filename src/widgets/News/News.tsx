@@ -9,7 +9,6 @@ import redesign from 'images/news/redesign.svg';
 import m1x from 'images/news/m1x.svg';
 import fiveG from 'images/news/5g.svg';
 import appleTv from 'images/news/appleTv.svg';
-import { SwiperSlide } from 'swiper/react';
 import cardNews from 'entities/Cards/CardNews/CardNews';
 
 const News: React.FC = () => {
