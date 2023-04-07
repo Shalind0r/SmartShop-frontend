@@ -17,6 +17,7 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
+        "hooks/*": ["hooks/*"],
 		"store/*": ["store/*"],
         "app/*": ["app/*"],
       	"pages/*": ["pages/*"],

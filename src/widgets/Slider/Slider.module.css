@@ -1,0 +1,39 @@
+/* стили анимаций  находяться в Index.css потому-что watchSlidesProgress
+нельзя присвоить свой кастомный класс  */
+
+.slide > img {
+	width: 100vw;
+}
+
+.slide {
+	position: relative;
+}
+
+.slideDescription {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	z-index: 1;
+	left: 86px;
+	right: 86px;
+	top: 25%;
+}
+
+.slideDescription__item {
+	max-width: 300px;
+	color: var(--color-text-main-weak);
+}
+
+.slideDescription__item:last-child {
+	text-align: right;
+}
+.title {
+	margin-bottom: 30px;
+}
+.label {
+	max-width: 200px;
+	margin-bottom: 79px;
+}
+.button {
+	width: 150px;
+}

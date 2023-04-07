@@ -1,6 +1,7 @@
 :root {
 	/* Палитра цветов */
 	--swiper-pagination-color: #ffffff !important;
+	--swiper-pagination-bottom: 7% !important;
 	--swiper-navigation-color: rgba(255, 255, 255, 0.15) !important;
 	--swiper-pagination-bullet-inactive-color: #7d7e80 !important;
 	--swiper-pagination-bullet-inactive-opacity: 0.5;
@@ -226,4 +227,46 @@ body {
 
 .link:hover > svg > path {
 	fill: var(--color-text-link-hover);
+}
+
+/*Анимация слайдов в компоненте Slider */
+
+.slideWithDescription > div > div {
+	opacity: 0;
+	transition: 2s;
+	transition-delay: 0.8s;
+}
+
+.slideWithDescription.swiper-slide-visible > div > div {
+	opacity: 1;
+}
+
+/*Анимация слайдов в компоненте CardSlider */
+.cardSliderSlide {
+	animation-name: invisible;
+	animation-duration: 0.7s;
+}
+@keyframes invisible {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0.5;
+	}
+}
+.cardSliderSlide.swiper-slide-visible {
+	animation-name: visible;
+	animation-duration: 0.7s;
+}
+@keyframes visible {
+	0% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
 }

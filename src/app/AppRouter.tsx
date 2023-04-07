@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { publicRoutes, authRoutes } from './routes';
-import Error404 from 'pages/ui/Error404/Error404';
+import Error404 from 'pages/Error404/Error404';
 
 const AppRouter: React.FC = () => {
 	let isAuth = false;

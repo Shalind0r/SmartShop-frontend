@@ -5,6 +5,7 @@ import svgr from 'vite-plugin-svgr';
 export default defineConfig({
 	resolve: {
 		alias: {
+			hooks: './src/hooks',
 			store: '/src/store',
 			app: '/src/app',
 			pages: '/src/pages',
