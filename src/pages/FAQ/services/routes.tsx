@@ -7,6 +7,7 @@ import {
 import Accordions from 'widgets/Accordions/Accordions';
 import { data } from 'pages/FAQ/services/db';
 import React from 'react';
+import { Navigate } from 'react-router-dom';
 
 export const { routes, navLinks } = {
 	routes: [
