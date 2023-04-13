@@ -25,7 +25,6 @@ const AppRouter: React.FC = () => {
 						caseSensitive={true}
 					/>
 				))}
-				<Route path="*" element={<Error404 />} />
 			</Routes>
 		</div>
 	);

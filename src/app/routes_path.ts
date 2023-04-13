@@ -8,6 +8,6 @@ export const ProductListRoute = '/product-list';
 export const AboutRoute = '/about';
 export const ProductRoute = '/product';
 export const ContactsRoute = '/contacts';
-export const FaqRoute = '/faq';
+export const FaqRoute = 'faq/*';
 export const BlogListRoute = '/blog-list';
 export const BlogRoute = '/blog';

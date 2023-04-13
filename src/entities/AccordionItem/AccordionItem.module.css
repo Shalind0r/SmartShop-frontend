@@ -1,0 +1,31 @@
+.accordion {
+	overflow: hidden;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+.button {
+	transition: 0.5s;
+}
+.button_active {
+	transform: rotate(-180deg);
+	transition: 0.5s;
+}
+.button_active > path {
+	fill: var(--color-text-additional);
+	transition: 0.5s;
+}
+.accordion__item {
+	background: var(--color-base-weak);
+	width: 100%;
+}
+
+.accordion__item > p {
+	padding: 40px;
+	color: var(--color-text-secondary);
+}

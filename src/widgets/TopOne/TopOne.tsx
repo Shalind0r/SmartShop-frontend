@@ -1,6 +1,6 @@
-import React, { ReactNode, useState } from 'react';
+import React, { useId, useState } from 'react';
 import CardsTop from 'entities/Cards/CardsTop/CardsTop';
-import { useMap } from 'hooks/useMap';
+
 import classes from './TopOne.module.css';
 //images
 import Macbook from 'images/TopOne/macbook.svg';
@@ -12,16 +12,8 @@ import IMac from 'images/TopOne/imac.svg';
 import IWatchConnector from 'images/TopOne/iwatchConnector.svg';
 import Iphone from 'images/TopOne/iphone.gif';
 
-interface CardData {
-	src: string;
-	alt: string;
-	title: string;
-	price?: string;
-	href: string;
-}
-
 const TopOne: React.FC = () => {
-	const [state] = useState<CardData[]>([
+	const state = [
 		{
 			src: Macbook,
 			alt: 'зображення Macbook',
@@ -78,11 +70,13 @@ const TopOne: React.FC = () => {
 			href: '#',
 			price: '',
 		},
-	]);
+	];
 
 	return (
 		<div className={classes.topOne}>
-			{useMap({ data: state, component: CardsTop })}
+			{state.map((data) => (
+				<CardsTop key={useId()} {...data} />
+			))}
 		</div>
 	);
 };

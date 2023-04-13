@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import classes from './CardSlider.module.css';
 import SliderNav from 'shared/ui/buttons/SliderNav/SliderNav';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import LinkWithArrow from 'shared/ui/links/LinkWithArrow/LinkWithArrow';
-import { useMap } from 'hooks/useMap';
+
 import { useAppDispatch, useAppSelector } from 'store/hooks/redux';
 import { params } from 'entities/CardSlider/services/params';
 import {
@@ -34,12 +34,11 @@ const CardSlider: React.FC<IProps> = (props) => {
 				className={classes.slider}
 				{...params}
 			>
-				{useMap({
-					wrapperClassName: 'cardSliderSlide',
-					data: props.data,
-					wrapper: SwiperSlide,
-					component: props.component,
-				})}
+				{props.data.map((data, index) => (
+					<SwiperSlide key={index}>
+						<props.component {...data} />
+					</SwiperSlide>
+				))}
 				<SliderNav
 					type={'prev'}
 					className={`${classes.prevSlide}  ${

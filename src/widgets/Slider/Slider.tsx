@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import classes from './Slider.module.css';
 // Import Swiper React components
 import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper';
@@ -11,10 +11,7 @@ import 'swiper/css/effect-fade';
 import firstSlide from 'images/slider/ipad.jpg';
 import secondSlide from 'images/slider/iphone.jpg';
 import Slide from 'entities/Slide/Slide';
-import { useMap } from 'hooks/useMap';
-interface SwiperType {
-	realIndex: number;
-}
+
 const Slider: React.FC = () => {
 	const state = [
 		{
@@ -76,13 +73,11 @@ const Slider: React.FC = () => {
 			className={classes.slider}
 			effect={'fade'}
 		>
-			{/*{slideItem}*/}
-			{useMap({
-				data: state,
-				wrapper: SwiperSlide,
-				component: Slide,
-				wrapperClassName: 'slideWithDescription',
-			})}
+			{state.map((data) => (
+				<SwiperSlide key={useId()} className={'slideWithDescription'}>
+					<Slide {...data}></Slide>
+				</SwiperSlide>
+			))}
 		</Swiper>
 	);
 };
