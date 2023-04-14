@@ -9,25 +9,30 @@ import classes from './FAQ.module.css';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { navLinks, routes } from 'pages/FAQ/services/routes';
 import FaqNav from 'widgets/FAQNav/FAQNav';
-import { GeneralRoute } from 'pages/FAQ/services/routes_path';
 import { FaqRoute } from 'app/routes_path';
 
 const FAQ: React.FC = () => {
-	const location = useLocation();
 	const element = useRoutes(routes);
 	const nodeRef = useRef(null);
 	const navigate = useNavigate();
-	if (location.pathname === `/${FaqRoute}`) {
-		return <Navigate to={GeneralRoute} replace={true} />;
-	}
+	const location = useLocation();
+	useEffect(() => {
+		if (location.pathname === `/${FaqRoute}`) {
+			navigate(routes[0].path, { replace: true });
+		}
+	}, [location, navigate]);
+
 	return (
 		<div className={classes.faq}>
 			<h1 className="typography--h1">FAQ</h1>
 			<FaqNav navLinks={navLinks} />
 			<SwitchTransition>
 				<CSSTransition
-					nodeRef={nodeRef}
+					appear={true}
+					component={false}
+					location={location}
 					key={location.pathname}
+					nodeRef={nodeRef}
 					timeout={500}
 					classNames={{
 						enter: classes.fadeEnter,
@@ -36,7 +41,6 @@ const FAQ: React.FC = () => {
 						exitActive: classes.fadeExitActive,
 					}}
 					unmountOnExit
-					mountOnEnter={true}
 				>
 					{(state) => (
 						<div ref={nodeRef} className={classes.content}>

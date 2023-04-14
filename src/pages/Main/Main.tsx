@@ -18,11 +18,11 @@ const Main: React.FC = () => {
 			<Slider />
 			<TopOne />
 			<News />
-			<Popular className={classes.mainPageGapT50} />
-			<GadgetsDiscount className={classes.mainPageGapT50} />
-			<Discount className={classes.mainPageGapT50} />
-			<PopularGadgets className={classes.mainPageGapT50} />
-			<Novelties className={classes.mainPageGapT50} />
+			<Popular className={classes.mainPageGapT62} />
+			<GadgetsDiscount className={classes.mainPageGapT62} />
+			<Discount className={classes.mainPageGapT62} />
+			<PopularGadgets className={classes.mainPageGapT62} />
+			<Novelties className={classes.mainPageGapT62} />
 			<AdvancesFirst className={classes.mainPageGapT100} />
 			<AdvancesSecond />
 			<SEO

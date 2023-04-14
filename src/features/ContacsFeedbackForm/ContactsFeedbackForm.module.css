@@ -1,0 +1,14 @@
+.form {
+	max-width: 416px;
+}
+.form > fieldset {
+	margin-bottom: 18px;
+}
+
+.textarea > textarea {
+	height: 120px;
+}
+
+.button {
+	width: 100%;
+}

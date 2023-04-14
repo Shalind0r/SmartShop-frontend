@@ -8,6 +8,7 @@ import Accordions from 'widgets/Accordions/Accordions';
 import { data } from 'pages/FAQ/services/db';
 import React from 'react';
 import { Navigate } from 'react-router-dom';
+import { FaqRoute } from 'app/routes_path';
 
 export const { routes, navLinks } = {
 	routes: [

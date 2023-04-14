@@ -9,44 +9,44 @@ import {
 	FaqRoute,
 } from 'app/routes_path';
 import ShopLogo from 'shared/ui/logo/ShopLogo/ShopLogo';
-import { NavLink } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+// TODO пофиксить ховер особистий кабінет
 const HeaderTop: React.FC = () => {
 	return (
 		<div className={classes.header}>
 			<div className={`${classes.header__wrapper} container`}>
 				<ShopLogo />
 				<div className={`${classes.navbar} typography--base`}>
-					<NavLink
+					<Link
 						to={AboutRoute}
 						className={`${classes.navbar__topItem} link`}
 					>
 						Компанія
-					</NavLink>
-					<NavLink
+					</Link>
+					<Link
 						to={BlogListRoute}
 						className={`${classes.navbar__topItem} link`}
 					>
 						Новини
-					</NavLink>
-					<NavLink
+					</Link>
+					<Link
 						to={FaqRoute}
 						className={`${classes.navbar__topItem} link`}
 					>
 						FAQ
-					</NavLink>
-					<NavLink
+					</Link>
+					<Link
 						to={'saasf'}
 						className={`${classes.navbar__topItem} link`}
 					>
 						Доставка і оплата
-					</NavLink>
-					<NavLink
+					</Link>
+					<Link
 						to={ContactsRoute}
 						className={`${classes.navbar__topItem} link`}
 					>
 						Контакти
-					</NavLink>
+					</Link>
 				</div>
 				<a
 					href={'#'}

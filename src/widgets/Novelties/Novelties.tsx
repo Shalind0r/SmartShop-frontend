@@ -70,13 +70,15 @@ const Novelties: React.FC<{ className?: string }> = ({ className }) => {
 		},
 	];
 	return (
-		<CardSlider
-			title={'Акции и новости'}
-			label={'Все акции и новости'}
-			label_href={'#'}
-			data={state}
-			component={productCard}
-		/>
+		<div className={className}>
+			<CardSlider
+				title={'Акции и новости'}
+				label={'Все акции и новости'}
+				label_href={'#'}
+				data={state}
+				component={productCard}
+			/>
+		</div>
 	);
 };
 

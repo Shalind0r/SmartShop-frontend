@@ -2,13 +2,6 @@ import React, { useRef, useState } from 'react';
 import classes from './AccordionItem.module.css';
 import { ReactComponent as Arrow } from 'shared/static/images/icons/buttons/accordionArrow.svg';
 import { IAccordion } from 'entities/AccordionItem/IAccordion';
-import {
-	AnimatedProps,
-	SpringValue,
-	useSpring,
-	animated,
-	config,
-} from 'react-spring';
 
 const AccordionItem: React.FC<IAccordion> = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +15,6 @@ const AccordionItem: React.FC<IAccordion> = (props) => {
 			isOpen ? '0px' : `${myElementRef.current?.scrollHeight}px`,
 		);
 	};
-	const effect = useSpring({
-		height: isOpen ? maxHeight : '0',
-	});
 	return (
 		<div className={classes.accordion}>
 			<div onClick={handleAccordionToggle} className={classes.title}>
@@ -33,9 +23,9 @@ const AccordionItem: React.FC<IAccordion> = (props) => {
 					className={isOpen ? classes.button_active : classes.button}
 				/>
 			</div>
-			<animated.div
+			<div
 				ref={myElementRef}
-				style={effect}
+				style={{ maxHeight }}
 				className={
 					isOpen
 						? `${classes.accordion__item_active} ${classes.accordion__item} typography--base`
@@ -43,9 +33,9 @@ const AccordionItem: React.FC<IAccordion> = (props) => {
 				}
 			>
 				<p>{props.content}</p>
-			</animated.div>
+				<div></div>
+			</div>
 		</div>
 	);
 };
-
 export default AccordionItem;

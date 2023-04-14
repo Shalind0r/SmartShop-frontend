@@ -19,7 +19,7 @@ const NumberImg: React.FC<types> = ({
 	return (
 		<p className={className}>
 			<a
-				className={`${classes.text} typography--h4`}
+				className={`${classes.text} ${className} typography--h4`}
 				href={mainLink}
 				target="_blank"
 				rel="noreferrer  nofollow"
