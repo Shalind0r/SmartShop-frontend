@@ -14,6 +14,7 @@ import {
 	RegistrationRoute,
 	SearchRoute,
 } from './routes_path';
+import Error404 from 'pages/Error404/Error404';
 
 const ProductList = lazy(() => import('pages/ProductList/ProductList'));
 const Product = lazy(() => import('pages/Product/Product'));
@@ -28,6 +29,10 @@ const About = lazy(() => import('pages/About/About'));
 const Main = lazy(() => import('pages/Main/Main'));
 
 export const publicRoutes = [
+	{
+		path: '*',
+		element: <Error404 />,
+	},
 	{
 		path: MainRoute,
 		element: <Main />,

@@ -20,7 +20,10 @@ const Main: React.FC = () => {
 			<News />
 			<Popular className={classes.mainPageGapT62} />
 			<GadgetsDiscount className={classes.mainPageGapT62} />
-			<Discount className={classes.mainPageGapT62} />
+			<Discount
+				title={'Акции и новости'}
+				className={classes.mainPageGapT62}
+			/>
 			<PopularGadgets className={classes.mainPageGapT62} />
 			<Novelties className={classes.mainPageGapT62} />
 			<AdvancesFirst className={classes.mainPageGapT100} />

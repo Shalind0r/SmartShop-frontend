@@ -9,7 +9,10 @@ import iphone from 'shared/static/images/Discount/iphone.svg';
 import macbook from 'shared/static/images/Discount/macbook.svg';
 import ProductCard from 'entities/Cards/ProductCard/ProductCard';
 
-const Discount: React.FC<{ className?: string }> = ({ className }) => {
+const Discount: React.FC<{ className?: string; title: string }> = ({
+	className,
+	title,
+}) => {
 	const state = [
 		{
 			href: '#',
@@ -80,7 +83,7 @@ const Discount: React.FC<{ className?: string }> = ({ className }) => {
 	return (
 		<div className={className}>
 			<CardSlider
-				title={'Акции и новости'}
+				title={title}
 				label={'Все акции и новости'}
 				label_href={'#'}
 				data={state}
