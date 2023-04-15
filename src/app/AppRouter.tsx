@@ -1,22 +1,29 @@
 import React, { CSSProperties, Suspense, useRef } from 'react';
 import { useLocation, useRoutes, matchPath } from 'react-router-dom';
 import { publicRoutes } from './routes';
-import Error404 from 'pages/Error404/Error404';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { ClipLoader } from 'react-spinners';
 import classes from './App.module.css';
+import { AboutRoute, ErrorRoute, MainRoute } from 'app/routes_path';
+import BreadCrumbs from 'widgets/BreadCrumbs/BreadCrumbs';
+
 const AppRouter: React.FC = () => {
 	const nodeRef = useRef(null);
 	let isAuth = false;
 	const override: CSSProperties = {
 		borderWidth: '10px',
 	};
-	const routes = useRoutes(publicRoutes);
 
+	const routes = useRoutes(publicRoutes);
 	const location = useLocation();
 	const pathSegments = location.pathname.split('/');
-
 	const key = pathSegments.length === 2 ? location.pathname : '';
+	const containerClassName =
+		location.pathname !== MainRoute &&
+		location.pathname !== ErrorRoute &&
+		location.pathname !== AboutRoute
+			? classes.container
+			: '';
 	return (
 		<div>
 			<SwitchTransition>
@@ -33,7 +40,7 @@ const AppRouter: React.FC = () => {
 					unmountOnExit
 				>
 					{(state) => (
-						<div ref={nodeRef}>
+						<div className={containerClassName} ref={nodeRef}>
 							<Suspense
 								fallback={
 									<div className={'spinner'}>
@@ -46,6 +53,12 @@ const AppRouter: React.FC = () => {
 									</div>
 								}
 							>
+								{' '}
+								{location.pathname !== MainRoute &&
+									location.pathname !== ErrorRoute &&
+									location.pathname !== AboutRoute && (
+										<BreadCrumbs />
+									)}
 								{routes}
 							</Suspense>
 						</div>
