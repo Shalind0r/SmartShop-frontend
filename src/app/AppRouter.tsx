@@ -1,11 +1,22 @@
 import React, { CSSProperties, Suspense, useRef } from 'react';
-import { useLocation, useRoutes, matchPath } from 'react-router-dom';
+import {
+	useLocation,
+	useRoutes,
+	matchPath,
+	RouteProps,
+} from 'react-router-dom';
 import { publicRoutes } from './routes';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { ClipLoader } from 'react-spinners';
 import classes from './App.module.css';
-import { AboutRoute, ErrorRoute, MainRoute } from 'app/routes_path';
-import BreadCrumbs from 'widgets/BreadCrumbs/BreadCrumbs';
+import {
+	AboutRoute,
+	CatalogRoute,
+	ErrorRoute,
+	MainRoute,
+} from 'app/routes_path';
+import BreadCrumbs from 'entities/BreadCrumbs/BreadCrumbs';
+import { useFindChildRoute } from 'hooks/useFindChildRoute';
 
 const AppRouter: React.FC = () => {
 	const nodeRef = useRef(null);
@@ -18,12 +29,20 @@ const AppRouter: React.FC = () => {
 	const location = useLocation();
 	const pathSegments = location.pathname.split('/');
 	const key = pathSegments.length === 2 ? location.pathname : '';
-	const containerClassName =
-		location.pathname !== MainRoute &&
-		location.pathname !== ErrorRoute &&
-		location.pathname !== AboutRoute
-			? classes.container
-			: '';
+
+	const isChildOfCatalogRoute = useFindChildRoute(CatalogRoute);
+	const shouldHideBreadcrumbs = () => {
+		const pathsToHide = [MainRoute, ErrorRoute, CatalogRoute, AboutRoute];
+		const exactMatch = pathsToHide.some(
+			(path) => location.pathname === path,
+		);
+
+		return exactMatch || isChildOfCatalogRoute;
+	};
+
+	const containerClassName = !shouldHideBreadcrumbs()
+		? classes.container
+		: '';
 	return (
 		<div>
 			<SwitchTransition>
@@ -37,7 +56,6 @@ const AppRouter: React.FC = () => {
 						exit: classes.appFadeExit,
 						exitActive: classes.appFadeExitActive,
 					}}
-					unmountOnExit
 				>
 					{(state) => (
 						<div className={containerClassName} ref={nodeRef}>
@@ -53,12 +71,7 @@ const AppRouter: React.FC = () => {
 									</div>
 								}
 							>
-								{' '}
-								{location.pathname !== MainRoute &&
-									location.pathname !== ErrorRoute &&
-									location.pathname !== AboutRoute && (
-										<BreadCrumbs />
-									)}
+								{!shouldHideBreadcrumbs() && <BreadCrumbs />}
 								{routes}
 							</Suspense>
 						</div>

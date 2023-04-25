@@ -1,17 +1,20 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import catalogReducer from './reducers/CatalogSlice/CatalogSlice';
+import HeaderReducer from 'store/reducers/HeaderSlice/HeaderSlice';
 import sliderReducer from './reducers/SliderSlice/SliderSlice';
-import accordionReducer from './reducers/AccordionSlice/AccordionSlice';
-
+import modelsReducer from 'store/reducers/ModelsSlice/ModelsSlice';
+import { Api } from './services/apiService';
 const rootReducer = combineReducers({
-	catalogReducer,
+	HeaderReducer,
 	sliderReducer,
-	accordionReducer,
+	modelsReducer,
+	[Api.reducerPath]: Api.reducer,
 });
 
 export const setupStore = () => {
 	return configureStore({
 		reducer: rootReducer,
+		middleware: (getDefaultMiddleware) =>
+			getDefaultMiddleware().concat(Api.middleware),
 	});
 };
 export type RootState = ReturnType<typeof rootReducer>;

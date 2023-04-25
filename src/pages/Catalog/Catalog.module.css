@@ -1,0 +1,47 @@
+.catalog {
+	background: rgba(2, 2, 2, 0.77);
+	width: 100vw;
+}
+.wrapper {
+	padding-right: 0;
+	max-width: 1920px;
+	margin: 0 auto;
+	width: 100%;
+	background: var(--color-text-main-strong);
+	position: relative;
+}
+.container {
+	display: flex;
+}
+.categories {
+	background: var(--color-text-main-weak);
+	padding-left: 100px;
+	padding-top: 33px;
+	position: absolute;
+	max-width: 1470px;
+	width: 72%;
+	right: 0;
+}
+.fadeEnter {
+	opacity: 0;
+	transform: translateY(-40vh);
+}
+
+.fadeEnterActive {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.4s,
+		transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fadeExit {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.fadeExitActive {
+	opacity: 0;
+	transform: translateY(70vh);
+	transition: opacity 0.3s 0.2s,
+		transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

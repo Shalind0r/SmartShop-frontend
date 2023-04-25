@@ -46,12 +46,13 @@
 	color: var(--color-text-main-weak);
 }
 
-.navbar__catalog.active {
+.navbar__catalog_active {
 	color: var(--color-action-primary);
 	pointer-events: none;
+	text-decoration: none;
 }
 
-.navbar__catalog.active > svg > path {
+.navbar__catalog_active > svg > path {
 	fill: var(--color-action-primary);
 }
 

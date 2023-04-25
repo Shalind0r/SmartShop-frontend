@@ -1,10 +1,11 @@
 export const MainRoute = '/';
+export const CatalogRoute = '/Kataloh/*';
 export const AuthRoute = '/auth';
 export const RegistrationRoute = '/registration';
 export const BasketRoute = '/basket';
 export const SearchRoute = '/search';
 export const ProfileRoute = '/profile';
-export const ProductListRoute = '/Tovari';
+export const ProductListRoute = '/:name';
 export const AboutRoute = '/Kompaniia';
 export const ProductRoute = '/Tovar';
 export const ContactsRoute = '/Kontakty';

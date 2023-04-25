@@ -6,42 +6,42 @@ import { ReactComponent as LightningIcon } from 'icons/lightning.svg';
 import { ReactComponent as FavoritesIcon } from 'icons/favorites.svg';
 import { ReactComponent as BasketIcon } from 'icons/basket.svg';
 import { ReactComponent as CloseIcon } from 'icons/close.svg';
-import { useAppDispatch, useAppSelector } from 'store/hooks/redux';
-import {
-	CloseCatalog,
-	OpenCatalog,
-} from 'store/reducers/CatalogSlice/CatalogSlice';
+import { NavLink } from 'react-router-dom';
+import { CatalogRoute } from 'app/routes_path';
+interface IProps {
+	routeAndChild: boolean;
+	style: React.CSSProperties;
+	closeCatalog: () => void;
+	visitedRoutes: string[];
+}
 
-const HeaderBottom: React.FC = () => {
-	const dispatch = useAppDispatch();
-	const { isOpen } = useAppSelector((state) => state.catalogReducer);
-
+const HeaderBottom: React.FC<IProps> = (props) => {
 	return (
 		<div className={classes.header}>
 			<div className={`${classes.header__wrapper} container`}>
 				<div className={`${classes.navbar} typography--base`}>
 					<SearchIcon
-						style={isOpen === true ? { opacity: 0 } : {}}
+						style={props.routeAndChild ? props.style : {}}
 						className={classes.search}
 					/>
 					<CloseIcon
-						style={isOpen === false ? { opacity: 0 } : {}}
-						onClick={() => dispatch(CloseCatalog())}
+						style={!props.routeAndChild ? props.style : {}}
+						onClick={props.closeCatalog}
 						className={classes.close}
 					/>
-					<a
-						onClick={() => dispatch(OpenCatalog())}
+					<NavLink
+						to={CatalogRoute}
 						className={
-							isOpen === true
-								? `${classes.navbar__catalog} ${classes.active}`
+							props.routeAndChild
+								? `${classes.navbar__catalog} ${classes.navbar__catalog_active} `
 								: `${classes.navbar__catalog} link`
 						}
 					>
 						<CatalogIcon />
 						Каталог товарів
-					</a>
+					</NavLink>
 					<div
-						style={isOpen === true ? { opacity: 0 } : {}}
+						style={props.routeAndChild ? props.style : {}}
 						className={classes.navbar__items}
 					>
 						<a href="#" className={'link'}>
@@ -66,7 +66,7 @@ const HeaderBottom: React.FC = () => {
 					</div>
 				</div>
 				<div
-					style={isOpen === true ? { opacity: 0 } : {}}
+					style={props.routeAndChild ? props.style : {}}
 					className={classes.products}
 				>
 					<FavoritesIcon />

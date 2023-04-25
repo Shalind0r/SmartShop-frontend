@@ -1,23 +1,22 @@
-import React from 'react';
-import HeaderBottom from 'entities/HeaderBottom/HeaderBottom';
+import React, { MutableRefObject, useEffect, useRef } from 'react';
 import HeaderTop from 'entities/HeaderTop/HeaderTop';
-import { useAppSelector } from 'store/hooks/redux';
 import classes from './Header.module.css';
-import Catalog from 'widgets/Catalog/Catalog';
+import HeaderBottomHOC from 'entities/HeaderBottom/HeaderBottomHOC';
+import { useAppDispatch } from 'store/hooks/redux';
+import { setHeaderHeight } from 'store/reducers/HeaderSlice/HeaderSlice';
 
 const Header: React.FC<{ className?: string }> = ({ className }) => {
-	const { isOpen } = useAppSelector((state) => state.catalogReducer);
+	const headerRef = useRef<HTMLDivElement | null>(null);
+	const dispatch = useAppDispatch();
+	useEffect(() => {
+		if (headerRef.current) {
+			dispatch(setHeaderHeight(headerRef.current.offsetHeight));
+		}
+	}, []);
 	return (
-		<header
-			className={
-				isOpen === true
-					? `${classes.fixed} ${className}`
-					: `${className} ${classes.header}`
-			}
-		>
+		<header ref={headerRef} className={`${className} ${classes.header}`}>
 			<HeaderTop />
-			<HeaderBottom />
-			<Catalog />
+			<HeaderBottomHOC />
 		</header>
 	);
 };

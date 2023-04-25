@@ -1,19 +1,15 @@
 import React, { lazy } from 'react';
 import {
 	AboutRoute,
-	AuthRoute,
-	BasketRoute,
 	BlogListRoute,
 	BlogRoute,
+	CatalogRoute,
 	ContactsRoute,
 	ErrorRoute,
 	FaqRoute,
 	MainRoute,
 	ProductListRoute,
 	ProductRoute,
-	ProfileRoute,
-	RegistrationRoute,
-	SearchRoute,
 } from './routes_path';
 import {
 	GeneralRoute,
@@ -26,16 +22,15 @@ import { Navigate } from 'react-router-dom';
 
 import Accordions from 'widgets/Accordions/Accordions';
 import { data } from 'pages/FAQ/services/db';
+import CatalogCategories from 'entities/CatalogCategories/CatalogCategories';
 
+const Catalog = lazy(() => import('pages/Catalog/Catalog'));
 const ProductList = lazy(() => import('pages/ProductList/ProductList'));
 const Product = lazy(() => import('pages/Product/Product'));
 const BlogList = lazy(() => import('pages/BlogList/BlogList'));
 const Blog = React.lazy(() => import('pages/Blog/Blog'));
 const Contacts = lazy(() => import('pages/Contacts/Contacts'));
 const FAQ = lazy(() => import('pages/FAQ/FAQ'));
-const Search = lazy(() => import('features/Search/Search'));
-const Auth = lazy(() => import('features/Auth/Auth'));
-const Registration = lazy(() => import('features/Registration/Registration'));
 const About = lazy(() => import('pages/About/About'));
 const Main = lazy(() => import('pages/Main/Main'));
 
@@ -49,12 +44,23 @@ export const publicRoutes = [
 		element: <Error404 />,
 	},
 	{
+		path: CatalogRoute,
+		element: <Catalog />,
+		children: [
+			{
+				path: `:name/:id`,
+				element: <CatalogCategories />,
+			},
+		],
+	},
+
+	{
 		path: MainRoute,
 		element: <Main />,
 	},
 
 	{
-		path: ProductListRoute,
+		path: `${ProductListRoute}`,
 		element: <ProductList />,
 	},
 	{

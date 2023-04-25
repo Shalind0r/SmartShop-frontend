@@ -2,11 +2,10 @@ import React from 'react';
 import classes from './DescriptionBody.module.css';
 import gadgets from 'shared/static/images/About/photo.png';
 import ButtonAction from 'shared/ui/buttons/ButtonAction/ButtonAction';
-import { OpenCatalog } from 'store/reducers/CatalogSlice/CatalogSlice';
-import { useAppDispatch } from 'store/hooks/redux';
+import { Link } from 'react-router-dom';
+import { CatalogRoute } from 'app/routes_path';
 
 const DescriptionBody: React.FC = () => {
-	const dispatch = useAppDispatch();
 	return (
 		<div className={classes.body}>
 			<img src={gadgets} alt="зображення гаджетів" />
@@ -36,13 +35,11 @@ const DescriptionBody: React.FC = () => {
 						пам&#39;яті
 					</li>
 				</ul>
-				<ButtonAction
-					className={classes.button}
-					type={'button'}
-					onClick={() => dispatch(OpenCatalog())}
-				>
-					Перейти в каталог
-				</ButtonAction>
+				<Link to={CatalogRoute}>
+					<ButtonAction className={classes.button} type={'button'}>
+						Перейти в каталог
+					</ButtonAction>
+				</Link>
 			</div>
 		</div>
 	);

@@ -1,11 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import {
-	Navigate,
-	Outlet,
-	useLocation,
-	useNavigate,
-	useRoutes,
-} from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import classes from './FAQ.module.css';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { navLinks } from 'pages/FAQ/services/links';

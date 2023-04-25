@@ -1,27 +1,25 @@
 .categories__wrapper {
 	max-width: 1127px;
 }
-.categories {
-	position: absolute;
-	padding-top: 33px;
-	background: var(--color-base-weak);
-	height: 80vh;
-	width: 73.3%;
-	padding-left: 100px;
-	right: 0;
-}
+
 .categories__wrapper > h2 {
 	margin-bottom: 75px;
 }
 .categories__columns {
-	display: grid;
-	grid-template-columns: repeat(3, auto);
-	justify-content: space-between;
 	padding-right: 10px;
-}
-.categories__item > p:last-child {
-	margin-bottom: 40px;
+	column-count: 3;
+	column-gap: 200px;
 }
 .categories__item {
-	max-width: 250px;
+	break-inside: avoid-column;
+	margin-bottom: 40px;
+}
+.categories__item > a {
+	color: var(--color-text-secondary);
+	transition: 0.3s;
+	text-decoration: none;
+}
+.categories__item > a:hover {
+	color: var(--color-text-main-strong);
+	text-decoration: underline;
 }

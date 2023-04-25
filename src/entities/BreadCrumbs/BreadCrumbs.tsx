@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import classes from './BreadCrumbs.module.css';
 import CyrillicToTranslit from 'cyrillic-to-translit-js';
+import { FaqRoute, ProductListRoute } from 'app/routes_path';
 
 const BreadCrumbs = () => {
 	const location = useLocation();
@@ -19,10 +20,11 @@ const BreadCrumbs = () => {
 		currentLink.push(crumb);
 		const isLastCrumb = index === crumbsArray.length - 1;
 
+		const decodedCrumb = decodeURIComponent(crumb); // Декодирование символов URL
 		const displayedCrumb =
-			crumb === 'FAQ'
-				? crumb
-				: CyrillicToTranslit({ preset: 'uk' }).reverse(crumb);
+			decodedCrumb === FaqRoute || ProductListRoute
+				? decodedCrumb
+				: CyrillicToTranslit({ preset: 'uk' }).reverse(decodedCrumb);
 
 		return isLastCrumb ? (
 			<span
@@ -33,6 +35,7 @@ const BreadCrumbs = () => {
 			</span>
 		) : (
 			<Link
+				key={index}
 				className={`${classes.crumbs} typography--remark`}
 				to={currentLink.join('/')}
 			>
