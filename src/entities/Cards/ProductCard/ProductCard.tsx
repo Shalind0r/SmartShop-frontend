@@ -6,8 +6,8 @@ import { ReactComponent as WishIcon } from 'shared/static/images/icons/wishIcon.
 import { ReactComponent as BasketIcon } from 'shared/static/images/icons/basket.svg';
 interface propTypes {
 	src: string;
-	alt: string;
-	href: string;
+	alt?: string;
+	href?: string;
 	title: string;
 	price: string;
 	oldPrice?: string;
@@ -63,7 +63,9 @@ const ProductCard: React.FC<propTypes> = (props) => {
 							<RatingStar />
 							<RatingStar />
 						</div>
-						<div className={`${classes.comments} typography--small`}>
+						<div
+							className={`${classes.comments} typography--small`}
+						>
 							<p>12</p>
 							<span>
 								<CommentsIcon />

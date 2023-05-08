@@ -48,8 +48,14 @@ export const publicRoutes = [
 		element: <Catalog />,
 		children: [
 			{
-				path: `:name/:id`,
+				path: `:name/:id/*`,
 				element: <CatalogCategories />,
+				children: [
+					{
+						path: `:name/:id/:subCategory`,
+						element: <Navigate to={'..'} replace />,
+					},
+				],
 			},
 		],
 	},

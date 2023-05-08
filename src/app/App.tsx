@@ -8,11 +8,13 @@ import { Scrollbars } from 'react-custom-scrollbars-2';
 import AppRouter from './AppRouter';
 import { useLocation } from 'react-router-dom';
 import { CatalogRoute } from 'app/routes_path';
-import { useFindChildRoute } from 'hooks/useFindChildRoute';
+import { useAppSelector } from 'store/hooks/redux';
 
 const App: React.FC = () => {
 	const location = useLocation();
-	const isChildOfCatalogRoute = useFindChildRoute(CatalogRoute);
+
+	const { hiddenPath } = useAppSelector((state) => state.routesReducer);
+	const footer = location.pathname === encodeURI(CatalogRoute) || hiddenPath;
 
 	return (
 		<div className="App">
@@ -26,11 +28,10 @@ const App: React.FC = () => {
 				)}
 				style={{ width: '100vw', height: '100vh' }}
 			>
-				<div className="content">
+				<div className={'wrapper'}>
 					<Header />
-					<AppRouter />
-					{location.pathname !== CatalogRoute ||
-						(isChildOfCatalogRoute && <Footer />)}
+					<AppRouter className={'content'} />
+					{!footer && <Footer />}
 				</div>
 			</Scrollbars>
 		</div>

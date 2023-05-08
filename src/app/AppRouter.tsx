@@ -1,24 +1,15 @@
 import React, { CSSProperties, Suspense, useRef } from 'react';
-import {
-	useLocation,
-	useRoutes,
-	matchPath,
-	RouteProps,
-} from 'react-router-dom';
+import { useLocation, useRoutes, matchPath, RouteProps } from 'react-router-dom';
 import { publicRoutes } from './routes';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { ClipLoader } from 'react-spinners';
 import classes from './App.module.css';
-import {
-	AboutRoute,
-	CatalogRoute,
-	ErrorRoute,
-	MainRoute,
-} from 'app/routes_path';
+import { AboutRoute, CatalogRoute, ErrorRoute, MainRoute } from 'app/routes_path';
 import BreadCrumbs from 'entities/BreadCrumbs/BreadCrumbs';
-import { useFindChildRoute } from 'hooks/useFindChildRoute';
+import { useAppSelector } from 'store/hooks/redux';
+import breadCrumbsReducer from 'store/reducers/RoutesSlice/RoutesSlice';
 
-const AppRouter: React.FC = () => {
+const AppRouter: React.FC<{ className?: string }> = ({ className }) => {
 	const nodeRef = useRef(null);
 	let isAuth = false;
 	const override: CSSProperties = {
@@ -30,31 +21,31 @@ const AppRouter: React.FC = () => {
 	const pathSegments = location.pathname.split('/');
 	const key = pathSegments.length === 2 ? location.pathname : '';
 
-	const isChildOfCatalogRoute = useFindChildRoute(CatalogRoute);
-	const shouldHideBreadcrumbs = () => {
-		const pathsToHide = [MainRoute, ErrorRoute, CatalogRoute, AboutRoute];
-		const exactMatch = pathsToHide.some(
-			(path) => location.pathname === path,
-		);
+	const { hiddenPath } = useAppSelector((state) => state.routesReducer);
+	const rulesArr = [
+		encodeURI(MainRoute),
+		encodeURI(ErrorRoute),
+		encodeURI(CatalogRoute),
+		encodeURI(AboutRoute),
+		hiddenPath,
+	];
 
-		return exactMatch || isChildOfCatalogRoute;
-	};
-
-	const containerClassName = !shouldHideBreadcrumbs()
+	const containerClassName = !rulesArr.includes(location.pathname)
 		? classes.container
 		: '';
+
 	return (
-		<div>
+		<div className={className}>
 			<SwitchTransition>
 				<CSSTransition
 					nodeRef={nodeRef}
 					key={key}
-					timeout={300}
+					timeout={400}
 					classNames={{
-						enter: classes.appFadeEnter,
-						enterActive: classes.appFadeEnterActive,
-						exit: classes.appFadeExit,
-						exitActive: classes.appFadeExitActive,
+						enter: 'appFadeEnter',
+						enterActive: 'appFadeEnterActive',
+						exit: 'appFadeExit',
+						exitActive: 'appFadeExitActive',
 					}}
 				>
 					{(state) => (
@@ -71,7 +62,7 @@ const AppRouter: React.FC = () => {
 									</div>
 								}
 							>
-								{!shouldHideBreadcrumbs() && <BreadCrumbs />}
+								{!rulesArr.includes(location.pathname) && <BreadCrumbs />}
 								{routes}
 							</Suspense>
 						</div>

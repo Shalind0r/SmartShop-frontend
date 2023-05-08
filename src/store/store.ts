@@ -1,12 +1,14 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import HeaderReducer from 'store/reducers/HeaderSlice/HeaderSlice';
 import sliderReducer from './reducers/SliderSlice/SliderSlice';
-import modelsReducer from 'store/reducers/ModelsSlice/ModelsSlice';
+import productsReducer from 'store/reducers/ProductsSlice/ProductsSlice';
+import routesReducer from 'store/reducers/RoutesSlice/RoutesSlice';
 import { Api } from './services/apiService';
 const rootReducer = combineReducers({
 	HeaderReducer,
 	sliderReducer,
-	modelsReducer,
+	productsReducer,
+	routesReducer,
 	[Api.reducerPath]: Api.reducer,
 });
 

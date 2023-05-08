@@ -50,8 +50,8 @@
 		0 2px 5px rgb(38 39 40 / 5.96%), 0 1px 3px rgb(38 39 40 / 5%),
 		0 0.5985px 1.5px rgb(38 39 40 / 4.04%), 0 0.249px 1px rgb(38 39 40 / 3%);
 	--shadow-6: 0 -1px 1px rgb(0 0 0 / 5%), 0 2px 2px rgb(0 0 0 / 5%),
-		0 4px 4px rgb(0 0 0 / 5%), 0 8px 8px rgb(0 0 0 / 5%),
-		0 16px 16px rgb(0 0 0 / 5%), 0 32px 32px rgb(0 0 0 / 5%);
+		0 4px 4px rgb(0 0 0 / 5%), 0 8px 8px rgb(0 0 0 / 5%), 0 16px 16px rgb(0 0 0 / 5%),
+		0 32px 32px rgb(0 0 0 / 5%);
 }
 
 /*Типография */
@@ -218,9 +218,7 @@ body {
 	right: 0;
 	height: 100vh;
 }
-.content {
-	padding-right: 10px;
-}
+
 .link {
 	text-decoration: none;
 	transition: 0.3s;
@@ -292,4 +290,34 @@ body {
 }
 .react-custom-scrollbars-2 {
 	overflow-y: hidden !important;
+}
+.appFadeEnter {
+	opacity: 0;
+}
+
+.appFadeEnterActive {
+	opacity: 1;
+	transition: opacity 400ms ease-in-out;
+}
+
+.appFadeExit {
+	opacity: 1;
+}
+
+.appFadeExitActive {
+	opacity: 0;
+	transition: opacity 400ms ease-in-out;
+}
+.App {
+	min-height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	padding-right: 10px;
+	display: flex;
+	flex-direction: column;
+}
+.content {
+	min-height: 100%;
+	flex: 1 1 auto;
 }

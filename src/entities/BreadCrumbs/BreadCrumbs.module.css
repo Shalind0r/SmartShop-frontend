@@ -22,6 +22,7 @@
 	text-decoration: none;
 	color: var(--color-text-additional);
 }
-.crumbs > span {
+
+.last {
 	color: var(--color-text-main-strong);
 }

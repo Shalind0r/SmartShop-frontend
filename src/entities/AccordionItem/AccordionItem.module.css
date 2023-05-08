@@ -30,3 +30,6 @@
 	padding: 40px;
 	color: var(--color-text-secondary);
 }
+.item {
+	transition: 0.5s;
+}

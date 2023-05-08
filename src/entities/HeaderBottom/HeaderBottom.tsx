@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './HeaderBottom.module.css';
 import { ReactComponent as SearchIcon } from 'icons/search.svg';
 import { ReactComponent as CatalogIcon } from 'icons/catalog.svg';
@@ -6,33 +6,31 @@ import { ReactComponent as LightningIcon } from 'icons/lightning.svg';
 import { ReactComponent as FavoritesIcon } from 'icons/favorites.svg';
 import { ReactComponent as BasketIcon } from 'icons/basket.svg';
 import { ReactComponent as CloseIcon } from 'icons/close.svg';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { CatalogRoute } from 'app/routes_path';
-interface IProps {
-	routeAndChild: boolean;
-	style: React.CSSProperties;
-	closeCatalog: () => void;
-	visitedRoutes: string[];
-}
+import { useAppDispatch, useAppSelector } from 'store/hooks/redux';
+import { setPreviousPath } from 'store/reducers/RoutesSlice/RoutesSlice';
 
-const HeaderBottom: React.FC<IProps> = (props) => {
+const HeaderBottom: React.FC = (props) => {
+	const location = useLocation();
+	const { hiddenPath, previousPath } = useAppSelector((state) => state.routesReducer);
+	const dispatch = useAppDispatch();
+	const style = { opacity: 0 };
+	const rule = location.pathname === hiddenPath;
+
 	return (
 		<div className={classes.header}>
 			<div className={`${classes.header__wrapper} container`}>
 				<div className={`${classes.navbar} typography--base`}>
-					<SearchIcon
-						style={props.routeAndChild ? props.style : {}}
-						className={classes.search}
-					/>
-					<CloseIcon
-						style={!props.routeAndChild ? props.style : {}}
-						onClick={props.closeCatalog}
-						className={classes.close}
-					/>
+					<SearchIcon style={rule ? style : {}} className={classes.search} />
+					<Link className={classes.close} to={previousPath}>
+						<CloseIcon style={!rule ? style : {}} />
+					</Link>
 					<NavLink
 						to={CatalogRoute}
+						onClick={() => dispatch(setPreviousPath(location.pathname))}
 						className={
-							props.routeAndChild
+							rule
 								? `${classes.navbar__catalog} ${classes.navbar__catalog_active} `
 								: `${classes.navbar__catalog} link`
 						}
@@ -40,10 +38,7 @@ const HeaderBottom: React.FC<IProps> = (props) => {
 						<CatalogIcon />
 						Каталог товарів
 					</NavLink>
-					<div
-						style={props.routeAndChild ? props.style : {}}
-						className={classes.navbar__items}
-					>
+					<div style={rule ? style : {}} className={classes.navbar__items}>
 						<a href="#" className={'link'}>
 							Побутова техніка
 						</a>
@@ -59,16 +54,11 @@ const HeaderBottom: React.FC<IProps> = (props) => {
 						<hr />
 						<a href="#" className={'link'}>
 							акції
-							<LightningIcon
-								className={classes.navbar__itemIcon2}
-							/>
+							<LightningIcon className={classes.navbar__itemIcon2} />
 						</a>
 					</div>
 				</div>
-				<div
-					style={props.routeAndChild ? props.style : {}}
-					className={classes.products}
-				>
+				<div style={rule ? style : {}} className={classes.products}>
 					<FavoritesIcon />
 					<hr />
 					<BasketIcon />

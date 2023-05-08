@@ -97,3 +97,7 @@
 	border: none;
 	background: var(--color-text-additional);
 }
+.close {
+	display: flex;
+	align-items: center;
+}

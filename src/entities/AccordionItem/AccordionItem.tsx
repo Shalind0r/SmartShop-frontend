@@ -11,30 +11,32 @@ const AccordionItem: React.FC<IAccordion> = (props) => {
 
 	const handleAccordionToggle = () => {
 		setIsOpen(!isOpen);
-		setMaxHeight(
-			isOpen ? '0px' : `${myElementRef.current?.scrollHeight}px`,
-		);
+		setMaxHeight(isOpen ? '0px' : `${myElementRef.current?.scrollHeight}px`);
 	};
 	return (
 		<div className={classes.accordion}>
 			<div onClick={handleAccordionToggle} className={classes.title}>
 				<h4 className={'typography--h4'}>{props.title}</h4>
-				<Arrow
-					className={isOpen ? classes.button_active : classes.button}
-				/>
+				<Arrow className={isOpen ? classes.button_active : classes.button} />
 			</div>
-			<div
-				ref={myElementRef}
-				style={{ maxHeight }}
-				className={
-					isOpen
-						? `${classes.accordion__item_active} ${classes.accordion__item} typography--base`
-						: ` ${classes.accordion__item} typography--base`
-				}
-			>
-				<p>{props.content}</p>
-				<div></div>
-			</div>
+			{props.content && (
+				<div
+					ref={myElementRef}
+					style={{ maxHeight }}
+					className={
+						isOpen
+							? `${classes.accordion__item_active} ${classes.accordion__item} typography--base`
+							: ` ${classes.accordion__item} typography--base`
+					}
+				>
+					{props.content && <p>{props.content}</p>}
+				</div>
+			)}
+			{props.children && (
+				<div className={classes.item} ref={myElementRef} style={{ maxHeight }}>
+					{props.children}
+				</div>
+			)}
 		</div>
 	);
 };

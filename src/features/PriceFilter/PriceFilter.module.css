@@ -1,0 +1,54 @@
+.priceFilter > h4 {
+	margin-bottom: 20px;
+}
+
+.form {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.form > input {
+	max-width: 80px;
+	height: 50px;
+	border: 1px solid var(--color-divider);
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-color: var(--color-base-weak);
+	background-clip: padding-box;
+	outline: none;
+	text-align: center;
+	transition: 0.5s;
+	color: var(--color-text-additional);
+}
+.form > input:focus {
+	background: var(--color-text-main-weak);
+	color: var(--color-text-main-strong);
+}
+.form > hr {
+	background: var(--color-text-additional);
+	border: none;
+	width: 13px;
+	height: 1px;
+}
+.form > button {
+	max-width: 58px;
+	width: 100%;
+	text-transform: uppercase;
+}
+.form > input[type='number']::-webkit-inner-spin-button,
+.form > input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.form > input[type='number'] {
+	-moz-appearance: textfield;
+}
+.form > input[type='number']:hover,
+.form > input[type='number']:focus {
+	-moz-appearance: textfield;
+}
+.form > input[type='number']::-webkit-inner-spin-button,
+.form > input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}

@@ -2,6 +2,7 @@
 	border: none;
 	padding: 0;
 	display: flex;
+	cursor: pointer;
 }
 .checkbox > input {
 	position: absolute;
@@ -33,4 +34,11 @@
 
 .checkbox > span:last-child {
 	margin-left: 10px;
+}
+.item {
+	color: var(--color-text-additional);
+	transition: 0.3s;
+}
+.checkbox > input:checked ~ .item {
+	color: var(--color-text-main-strong);
 }

@@ -1,4 +1,7 @@
+import { ReactNode } from 'react';
+
 export interface IAccordion {
 	title: string;
-	content: string;
+	content?: string;
+	children?: ReactNode;
 }

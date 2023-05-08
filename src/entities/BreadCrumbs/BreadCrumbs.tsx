@@ -1,15 +1,19 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import classes from './BreadCrumbs.module.css';
-import CyrillicToTranslit from 'cyrillic-to-translit-js';
-import { FaqRoute, ProductListRoute } from 'app/routes_path';
+
+import { CatalogRoute } from 'app/routes_path';
+import { useAppDispatch, useAppSelector } from 'store/hooks/redux';
+import { setPreviousPath } from 'store/reducers/RoutesSlice/RoutesSlice';
 
 const BreadCrumbs = () => {
 	const location = useLocation();
+	const { path, category, categoryGroup, subCategory } = useAppSelector(
+		(state) => state.routesReducer,
+	);
+	const dispatch = useAppDispatch();
 	let currentLink = [''];
-	const crumbsArray = location.pathname
-		.split('/')
-		.filter((crumb) => crumb !== '');
+	const crumbsArray = location.pathname.split('/').filter((crumb) => crumb !== '');
 
 	const faqIndex = crumbsArray.indexOf('FAQ');
 	if (faqIndex !== -1) {
@@ -21,17 +25,13 @@ const BreadCrumbs = () => {
 		const isLastCrumb = index === crumbsArray.length - 1;
 
 		const decodedCrumb = decodeURIComponent(crumb); // Декодирование символов URL
-		const displayedCrumb =
-			decodedCrumb === FaqRoute || ProductListRoute
-				? decodedCrumb
-				: CyrillicToTranslit({ preset: 'uk' }).reverse(decodedCrumb);
 
 		return isLastCrumb ? (
 			<span
-				className={`${classes.crumbs} typography--remark`}
+				className={`${classes.crumbs} ${classes.last} typography--remark`}
 				key={index}
 			>
-				{displayedCrumb}
+				{decodedCrumb}
 			</span>
 		) : (
 			<Link
@@ -39,7 +39,7 @@ const BreadCrumbs = () => {
 				className={`${classes.crumbs} typography--remark`}
 				to={currentLink.join('/')}
 			>
-				{displayedCrumb}
+				{decodedCrumb}
 			</Link>
 		);
 	});
@@ -49,7 +49,34 @@ const BreadCrumbs = () => {
 			<Link className={`${classes.main} typography--remark`} to="/">
 				Головна
 			</Link>
-			{crumbs}
+			{location.pathname === path ? (
+				<>
+					<Link to={CatalogRoute} className={`typography--remark`}>
+						Каталог
+					</Link>
+					<Link
+						onClick={() => dispatch(setPreviousPath(location.pathname))}
+						to={`${CatalogRoute}/${category}`}
+						className={`${classes.crumbs} typography--remark`}
+					>
+						{category}
+					</Link>
+					<Link
+						onClick={() => dispatch(setPreviousPath(location.pathname))}
+						to={`${CatalogRoute}/${category}`}
+						className={`${classes.crumbs} typography--remark`}
+					>
+						{categoryGroup}
+					</Link>
+					<span
+						className={`${classes.crumbs} ${classes.last} typography--remark`}
+					>
+						{subCategory}
+					</span>
+				</>
+			) : (
+				crumbs
+			)}
 		</div>
 	);
 };

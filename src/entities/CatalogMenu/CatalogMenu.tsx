@@ -2,7 +2,6 @@ import React, { CSSProperties } from 'react';
 import classes from './CatalogMenu.module.css';
 import { ISubCategory } from 'shared/types/ICatalog';
 import { NavLink } from 'react-router-dom';
-import CyrillicToTranslit from 'cyrillic-to-translit-js';
 const CatalogMenu: React.FC<{
 	data: ISubCategory[] | undefined;
 	height: CSSProperties;
@@ -12,9 +11,7 @@ const CatalogMenu: React.FC<{
 			{data &&
 				data.map((data) => (
 					<NavLink
-						to={CyrillicToTranslit({ preset: 'uk' }).transform(
-							`${data.name}/${data.id}`,
-						)}
+						to={`${data.name}/${data.id}`}
 						key={data.id}
 						className={({ isActive }) =>
 							isActive

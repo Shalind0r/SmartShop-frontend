@@ -1,21 +1,38 @@
 import React from 'react';
 import classes from './CheckBox.module.css';
 import { ReactComponent as Check } from 'shared/static/images/icons/buttons/checkbox.svg';
-
-const CheckBox: React.FC<{ className?: string; text?: string }> = ({
-	className,
-	text,
-}) => {
+interface IProps {
+	className?: string;
+	text?: string;
+	id?: number;
+	handleToggle?: () => void;
+	checked?: boolean;
+	on?: boolean;
+}
+const CheckBox: React.FC<IProps> = (props) => {
 	return (
 		<label
-			htmlFor={'checkbox'}
-			className={`${className} ${classes.checkbox}`}
+			htmlFor={props.id ? `${props.id}` : 'checkbox'}
+			className={`${props.className} ${classes.checkbox}`}
 		>
-			<input id={'checkbox'} type={'checkbox'} />
+			<input
+				checked={props.checked}
+				onChange={props.handleToggle}
+				id={props.id ? `${props.id}` : 'checkbox'}
+				type={'checkbox'}
+			/>
 			<span className={classes.check}>
 				<Check />
 			</span>
-			<span className={'typography--base'}>{text}</span>
+			<span
+				className={
+					props.id
+						? `${classes.item} typography--base`
+						: ' typography--base'
+				}
+			>
+				{props.text}
+			</span>
 		</label>
 	);
 };

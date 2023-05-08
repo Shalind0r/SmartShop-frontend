@@ -1,0 +1,19 @@
+.productsList {
+	max-width: 1720px;
+	margin: 0 auto;
+	width: 98vw;
+}
+.productsList > h1 {
+	margin-bottom: 33px;
+}
+
+.products {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 60px;
+	row-gap: 50px;
+	margin-left: 20px;
+}
+.content {
+	display: flex;
+}

@@ -1,0 +1,57 @@
+.selected__title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.selected__title > p {
+	color: var(--color-text-additional);
+	cursor: pointer;
+}
+.selected__item {
+	margin-bottom: 8px;
+	cursor: pointer;
+}
+.selected__item > p {
+	background: var(--color-divider);
+	transition: 0.5s;
+	padding: 10px 13px;
+	border-radius: 50px;
+	display: inline-flex;
+	align-items: center;
+}
+.selected__item > p > svg {
+	margin-left: 10px;
+	width: 13px;
+	height: 13px;
+}
+.selected__item:hover > p > svg > path {
+	transition: 0.5s;
+}
+.selected__item:hover > p > svg > path {
+	fill: var(--color-text-main-strong);
+}
+.selected__item:hover > p {
+	background: var(--color-action-primary);
+}
+.itemEnter {
+	transform: translateX(-100%);
+	opacity: 0;
+}
+
+.itemEnterActive {
+	transform: translateX(0);
+	opacity: 1;
+	transition: transform 500ms, opacity 500ms;
+}
+
+.itemExit {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.itemExitActive {
+	transform: translateX(-100%);
+	opacity: 0;
+	transition: transform 500ms, opacity 500ms;
+}

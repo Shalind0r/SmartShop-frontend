@@ -14,8 +14,3 @@ export interface ICatalog {
 	name: string;
 	categoriesGroups: ICategoryGroup[];
 }
-export interface IModels {
-	id: number;
-	name: string;
-	img: string;
-}
