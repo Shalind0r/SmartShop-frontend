@@ -321,3 +321,11 @@ body {
 	min-height: 100%;
 	flex: 1 1 auto;
 }
+
+input {
+	transition: 0.3s;
+}
+.input:focus {
+	box-shadow: var(--shadow-6);
+	transition: 0.3s;
+}

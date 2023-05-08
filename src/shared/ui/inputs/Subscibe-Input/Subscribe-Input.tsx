@@ -1,14 +1,17 @@
 import React from 'react';
+import { UseFormRegisterReturn } from 'react-hook-form';
 import classes from './Subscribe-Input.module.css';
-interface types {
+interface IProps {
 	className?: string;
+	register?: UseFormRegisterReturn<'email'>;
 }
-const SubscribeInput: React.FC<types> = ({ className }) => {
+const SubscribeInput: React.FC<IProps> = ({ className, register }) => {
 	return (
 		<input
-			className={`${classes.input} ${className} typography--base `}
+			maxLength={20}
+			className={`${classes.input} ${className} input typography--base `}
 			placeholder="Мій e-mail"
-			type="email"
+			{...register}
 		/>
 	);
 };

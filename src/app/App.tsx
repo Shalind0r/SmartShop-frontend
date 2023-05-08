@@ -14,7 +14,8 @@ const App: React.FC = () => {
 	const location = useLocation();
 
 	const { hiddenPath } = useAppSelector((state) => state.routesReducer);
-	const footer = location.pathname === encodeURI(CatalogRoute) || hiddenPath;
+	const footer =
+		location.pathname === encodeURI(CatalogRoute) || location.pathname === hiddenPath;
 
 	return (
 		<div className="App">

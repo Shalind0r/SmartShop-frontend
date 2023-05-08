@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 interface IProps {
 	children: string;
 	className?: string;
-	type: string;
+	type: 'button' | 'submit' | 'link';
 	link?: string;
 	to?: string;
 	onClick?: () => void;
@@ -13,7 +13,7 @@ interface IProps {
 }
 
 const ButtonAction: React.FC<IProps> = (props) => {
-	return props.type === 'button' ? (
+	return props.type === 'button' || 'submit' ? (
 		<button
 			type={props.send === true ? 'submit' : 'button'}
 			onClick={props.onClick}

@@ -8,4 +8,6 @@
 	border-right: none;
 	border-radius: 5px 0 0 5px;
 	padding-left: 18px;
+	max-width: 264px;
+	width: 100%;
 }

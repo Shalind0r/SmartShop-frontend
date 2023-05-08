@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './CheckBox.module.css';
 import { ReactComponent as Check } from 'shared/static/images/icons/buttons/checkbox.svg';
+import { UseFormRegisterReturn } from 'react-hook-form';
 interface IProps {
 	className?: string;
 	text?: string;
@@ -8,6 +9,7 @@ interface IProps {
 	handleToggle?: () => void;
 	checked?: boolean;
 	on?: boolean;
+	register?: UseFormRegisterReturn<string>;
 }
 const CheckBox: React.FC<IProps> = (props) => {
 	return (
@@ -16,6 +18,7 @@ const CheckBox: React.FC<IProps> = (props) => {
 			className={`${props.className} ${classes.checkbox}`}
 		>
 			<input
+				{...props.register}
 				checked={props.checked}
 				onChange={props.handleToggle}
 				id={props.id ? `${props.id}` : 'checkbox'}
@@ -26,9 +29,7 @@ const CheckBox: React.FC<IProps> = (props) => {
 			</span>
 			<span
 				className={
-					props.id
-						? `${classes.item} typography--base`
-						: ' typography--base'
+					props.id ? `${classes.item} typography--base` : ' typography--base'
 				}
 			>
 				{props.text}
